@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Gainable",
   "colors": {
-    "primary": "#6366F1",
-    "light": "#818CF8",
-    "dark": "#4F46E5"
+    "primary": "#ff6b34",
+    "light": "#ff8a5c",
+    "dark": "#e55a24"
   },
   "favicon": "/favicon.svg",
   "navigation": {
