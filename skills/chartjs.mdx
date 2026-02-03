@@ -1,0 +1,256 @@
+---
+title: "Charts & Visualization"
+description: "Add data visualization to your Gainable apps"
+---
+
+## Overview
+
+Gainable apps include Chart.js for data visualization. You can add charts to any page by describing what you want to see.
+
+## Chart types
+
+### Line charts
+
+Best for showing trends over time.
+
+```text
+"Add a line chart showing sales per month"
+"Display order count over the last 12 months"
+"Show revenue trend as a line graph"
+```
+
+<Frame>
+  ![Line chart example](/images/chart-line.png)
+</Frame>
+
+### Bar charts
+
+Best for comparing categories.
+
+```text
+"Add a bar chart comparing sales by region"
+"Show deals closed by salesperson"
+"Display monthly revenue as bars"
+```
+
+### Pie charts
+
+Best for showing proportions.
+
+```text
+"Add a pie chart showing deals by status"
+"Display tasks by priority as a pie chart"
+"Show revenue breakdown by product category"
+```
+
+### Doughnut charts
+
+Similar to pie charts with a hole in the center.
+
+```text
+"Add a doughnut chart for expense categories"
+"Show completion status as a doughnut"
+```
+
+## Requesting charts
+
+### Be specific about the data
+
+<CodeGroup>
+```text Good
+"Add a pie chart showing deals grouped by status (won, lost, pending)"
+```
+
+```text Vague
+"Add a chart"
+```
+</CodeGroup>
+
+### Specify the chart type
+
+<CodeGroup>
+```text Good
+"Add a line chart showing monthly revenue"
+```
+
+```text Ambiguous
+"Show monthly revenue"
+```
+</CodeGroup>
+
+### Name your metrics
+
+<CodeGroup>
+```text Good
+"Dashboard with:
+- Total deals (count)
+- Pipeline value (sum of amounts)
+- Deals by status (pie chart)
+- Revenue by month (line chart)"
+```
+
+```text Incomplete
+"Dashboard with some charts"
+```
+</CodeGroup>
+
+## Common patterns
+
+### Dashboard with KPIs and charts
+
+```text
+"Add a dashboard showing:
+- Total deals count (KPI card)
+- Total pipeline value (KPI card)
+- Average deal size (KPI card)
+- Deals by status (pie chart)
+- Deals closed per month (line chart)
+- Top 5 deals by amount (table)"
+```
+
+### Charts on detail pages
+
+```text
+"On the company detail page, add:
+- Deals by status for this company (pie chart)
+- Monthly revenue from this company (line chart)"
+```
+
+### Comparative charts
+
+```text
+"Add a bar chart comparing:
+- Deals by salesperson
+- Revenue by product
+- Orders by region"
+```
+
+## Date-based charts
+
+When charting data over time, specify the date field:
+
+```text
+"Line chart showing deals by close date per month"
+"Bar chart of orders by order date"
+```
+
+<Tip>
+If your data has a business date (like close date or order date), specify it. Otherwise, charts will use the creation date.
+</Tip>
+
+## Interactive features
+
+Charts in Gainable are interactive:
+
+- **Hover** - See exact values
+- **Click** - Filter or drill down (when configured)
+- **Resize** - Responsive to container size
+- **Animate** - Smooth transitions on data change
+
+## Real-time updates
+
+Charts update automatically when data changes:
+
+- New records are added to the chart
+- Updated values refresh the visualization
+- Deleted records are removed
+- All without page refresh
+
+## Chart placement
+
+### On dashboards
+
+```text
+"Dashboard with a pie chart on the left and line chart on the right"
+```
+
+### In cards
+
+```text
+"Show the status distribution chart in a card"
+```
+
+### With data tables
+
+```text
+"Above the deals table, show a chart of deals by status"
+```
+
+## Customization
+
+### Colors
+
+```text
+"Use green for won deals, red for lost, yellow for pending"
+"Use the theme colors for the chart"
+```
+
+### Labels
+
+```text
+"Show percentages on the pie chart"
+"Include data values on the bars"
+```
+
+### Legends
+
+```text
+"Put the legend below the chart"
+"Hide the legend" (for simple charts)
+```
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Match chart type to data">
+    - **Trends over time** → Line chart
+    - **Category comparison** → Bar chart
+    - **Part of whole** → Pie or doughnut
+  </Accordion>
+
+  <Accordion title="Don't overcrowd">
+    Limit pie charts to 5-7 segments. Use bar charts for more categories.
+  </Accordion>
+
+  <Accordion title="Use meaningful titles">
+    "Deals by Status" is clearer than "Chart 1"
+  </Accordion>
+
+  <Accordion title="Consider the context">
+    Place charts where they're relevant - sales charts on sales pages, etc.
+  </Accordion>
+</AccordionGroup>
+
+## Examples
+
+### Sales dashboard
+
+```text
+Build a sales dashboard with:
+- Total revenue (KPI card)
+- Deal count (KPI card)
+- Win rate (KPI card)
+- Revenue by month (line chart)
+- Deals by stage (pie chart)
+- Top salespeople (bar chart)
+```
+
+### Project overview
+
+```text
+Add to the project dashboard:
+- Tasks by status (doughnut chart)
+- Tasks completed per week (line chart)
+- Overdue tasks count (KPI card)
+```
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Data models" icon="database" href="/building/data-models">
+    Understanding your data
+  </Card>
+  <Card title="Real-time" icon="bolt" href="/building/real-time">
+    Live chart updates
+  </Card>
+</CardGroup>

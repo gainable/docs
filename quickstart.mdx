@@ -1,80 +1,102 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "Build your first app in 5 minutes"
 ---
 
-## Get started in three steps
+## Create your first app
 
-Get your documentation site running locally and make your first customization.
+Let's build a simple deal tracker to see Gainable in action. This will take about 5 minutes.
 
-### Step 1: Set up your local environment
+### Step 1: Start a new project
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+1. Go to [app.gainable.ai](https://app.gainable.ai)
+2. Click **New Project**
+3. Give your project a name (e.g., "My Deal Tracker")
 
-### Step 2: Deploy your changes
+### Step 2: Describe what you want
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+In the chat interface, type your first prompt:
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+<CodeGroup>
+```text Good prompt
+Build a deal tracker with:
+- Deal name, company, and amount
+- Status (new, in progress, won, lost)
+- A dashboard showing total deal value and a chart of deals by status
+```
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+```text What this creates
+- A Deal data model with all your fields
+- A deals page with a table to manage deals
+- Add, edit, and delete functionality
+- A dashboard with KPI cards and a pie chart
+```
+</CodeGroup>
 
-### Step 3: Go live
+<Tip>
+Being specific about your fields (like "deal name, company, and amount") helps Gainable create exactly what you need.
+</Tip>
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+### Step 3: Watch it build
 
-## Next steps
+Gainable will show you a plan of what it's going to build, then generate your entire application. You'll see:
 
-Now that you have your docs running, explore these key features:
+1. **Plan preview** - What features will be created
+2. **Live progress** - Watch files being generated
+3. **Your app** - A working application appears in the preview
 
-<CardGroup cols={2}>
+### Step 4: Use your app
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
+Once the build completes, you can:
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
+- **Add a deal** - Click the "Add Deal" button and fill in the form
+- **View your dashboard** - See your data visualized in charts
+- **Edit or delete** - Click on any deal to modify it
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+Your app updates in real-time. If you add a deal, the dashboard chart updates automatically.
 </Note>
+
+## Try adding a feature
+
+Now let's add something new. In the chat, type:
+
+```text
+Add a kanban board view where I can drag deals between status columns
+```
+
+Gainable will add a kanban board to your existing app, preserving everything you've already built.
+
+## Tips for success
+
+<AccordionGroup>
+  <Accordion title="Be specific about your data">
+    Instead of "track customers", say "track customers with name, email, company, and signup date"
+  </Accordion>
+  <Accordion title="Describe relationships">
+    If things are connected, say so: "each project has many tasks" or "contacts belong to companies"
+  </Accordion>
+  <Accordion title="Iterate incrementally">
+    Start simple and add features one at a time. Don't try to build everything in one prompt.
+  </Accordion>
+  <Accordion title="Request features by name">
+    Ask for specific features: "add a pie chart", "add a kanban board", "add real-time updates"
+  </Accordion>
+</AccordionGroup>
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="Learn about prompting" icon="message" href="/prompting/overview">
+    Write prompts that get great results
+  </Card>
+  <Card title="See examples" icon="lightbulb" href="/prompting/examples">
+    Copy and adapt real prompts
+  </Card>
+  <Card title="Explore skills" icon="wand-magic-sparkles" href="/concepts/skills">
+    Discover built-in features you can request
+  </Card>
+  <Card title="Build with data" icon="database" href="/building/data-models">
+    Understand how your data is organized
+  </Card>
+</CardGroup>

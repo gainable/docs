@@ -1,0 +1,277 @@
+---
+title: "Design & Theming"
+description: "Customize the look and feel of your Gainable apps"
+---
+
+## Overview
+
+Gainable apps use DaisyUI themes for consistent, beautiful styling. You can customize colors, apply themes, and adjust the visual design through your prompts.
+
+## Themes
+
+Themes provide a complete color palette for your app. Request a theme by name:
+
+```text
+"Use the corporate theme"
+"Apply the cupcake theme"
+"Switch to dark mode"
+```
+
+### Available themes
+
+| Theme | Description |
+|-------|-------------|
+| `light` | Clean, minimal light theme (default) |
+| `dark` | Dark mode with high contrast |
+| `cupcake` | Soft, playful pastels |
+| `corporate` | Professional blues and grays |
+| `retro` | Warm, vintage colors |
+| `cyberpunk` | Bold neons on dark |
+| `valentine` | Pinks and romantic tones |
+| `garden` | Fresh greens and naturals |
+| `forest` | Deep, earthy greens |
+| `lofi` | Muted, relaxed tones |
+| `pastel` | Soft pastel colors |
+| `fantasy` | Purple and magical |
+| `luxury` | Gold and black elegance |
+| `autumn` | Warm oranges and browns |
+| `business` | Serious, professional |
+| `night` | Deep blue dark mode |
+| `winter` | Cool blues and whites |
+| `nord` | Nordic-inspired palette |
+| `emerald` | Rich emerald greens |
+
+### Choosing a theme
+
+Match the theme to your app's purpose:
+
+| App Type | Suggested Themes |
+|----------|------------------|
+| Business/CRM | corporate, business, light |
+| Fun/Consumer | cupcake, pastel, fantasy |
+| Tech/Developer | cyberpunk, night, nord |
+| Nature/Eco | garden, forest, emerald |
+| Premium/Luxury | luxury, dark |
+| Warm/Friendly | autumn, retro, lofi |
+
+## Requesting themes
+
+### Direct theme request
+
+```text
+"Use the corporate theme"
+"Apply dark mode"
+```
+
+### By description
+
+```text
+"Professional, corporate feel" → corporate or business
+"Playful and fun" → cupcake or pastel
+"Modern and techy" → cyberpunk or night
+"Warm and cozy" → autumn or retro
+"Premium look" → luxury or dark
+"Fresh and natural" → garden or emerald
+```
+
+<Tip>
+If you describe a style like "professional" or "playful", Gainable will choose an appropriate theme automatically.
+</Tip>
+
+## Color customization
+
+Beyond themes, you can request specific colors:
+
+```text
+"Use blue and gray colors"
+"Make the primary color green"
+"Use a purple accent color"
+```
+
+### Color contexts
+
+| Context | What it affects |
+|---------|----------------|
+| Primary | Buttons, links, active states |
+| Secondary | Secondary buttons, accents |
+| Accent | Highlights, special elements |
+| Neutral | Backgrounds, text |
+
+## UI components
+
+Gainable apps use DaisyUI components that adapt to your theme:
+
+### Buttons
+
+```text
+"Primary action buttons"
+"Outline style buttons"
+"Ghost buttons for subtle actions"
+```
+
+### Cards
+
+```text
+"Cards with shadows"
+"Bordered cards"
+"Compact cards"
+```
+
+### Forms
+
+```text
+"Bordered input fields"
+"Floating label inputs"
+"Compact form layout"
+```
+
+### Navigation
+
+```text
+"Tab navigation"
+"Sidebar navigation"
+"Breadcrumb navigation"
+```
+
+## Layout requests
+
+### Page structure
+
+```text
+"Sidebar on the left with main content on the right"
+"Header at top, content below"
+"Full-width layout"
+```
+
+### Content layout
+
+```text
+"Two-column layout"
+"Grid of cards"
+"Stacked sections"
+```
+
+### Spacing
+
+```text
+"More padding around content"
+"Compact layout"
+"Spacious design"
+```
+
+## Responsive design
+
+All Gainable apps are automatically responsive. The layout adjusts for:
+
+- **Desktop**: Full sidebar, multi-column grids
+- **Tablet**: Collapsible sidebar, adjusted columns
+- **Mobile**: Single column, hamburger menu
+
+You don't need to request this - it's built in.
+
+## Common customizations
+
+### Add a sidebar
+
+```text
+"Add a sidebar with navigation links to Dashboard, Deals, and Contacts"
+```
+
+### Style badges
+
+```text
+"Show priority as colored badges:
+- High: red
+- Medium: yellow
+- Low: green"
+```
+
+### Card styling
+
+```text
+"Show deals as cards with shadows and hover effects"
+```
+
+### Table styling
+
+```text
+"Striped table rows"
+"Compact table with smaller text"
+"Bordered table cells"
+```
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Choose one theme and stick with it">
+    Consistency is better than mixing styles. Pick a theme that fits your purpose.
+  </Accordion>
+
+  <Accordion title="Let the theme do the work">
+    Themes handle colors automatically. You don't need to specify colors for every element.
+  </Accordion>
+
+  <Accordion title="Describe the feel, not the pixels">
+    "Professional and clean" works better than "use #1a1a1a with 16px padding"
+  </Accordion>
+
+  <Accordion title="Consider your users">
+    Business apps → corporate themes. Fun apps → playful themes. Match user expectations.
+  </Accordion>
+</AccordionGroup>
+
+## Examples
+
+### Professional dashboard
+
+```text
+"Use the corporate theme.
+Clean layout with:
+- Sidebar navigation
+- KPI cards at the top
+- Charts below
+- Professional, minimal design"
+```
+
+### Playful task app
+
+```text
+"Use the cupcake theme.
+Friendly design with:
+- Colorful status badges
+- Card-based layout
+- Fun, approachable feel"
+```
+
+### Dark mode app
+
+```text
+"Use dark mode.
+Modern, sleek design with:
+- High contrast text
+- Subtle borders
+- Glowing accent colors"
+```
+
+## Changing themes later
+
+You can always update the theme:
+
+```text
+"Change the theme to dark mode"
+"Switch to the forest theme"
+"Make it look more professional"
+```
+
+The entire app updates to the new theme while keeping all your data and features.
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Views" icon="window" href="/building/views">
+    Page layouts and components
+  </Card>
+  <Card title="Best practices" icon="star" href="/prompting/best-practices">
+    Writing effective prompts
+  </Card>
+</CardGroup>

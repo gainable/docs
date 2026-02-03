@@ -1,0 +1,144 @@
+---
+title: "How it works"
+description: "Understand how Gainable turns your ideas into working apps"
+---
+
+## From idea to app
+
+When you describe what you want to build, Gainable uses specialized AI agents that work together to create your application. Here's what happens behind the scenes:
+
+<Steps>
+  <Step title="You describe your app">
+    Write what you want in plain English. Be as specific or general as you like.
+  </Step>
+  <Step title="Planner Agent analyzes your request">
+    The Planner understands your intent, identifies what data you need, and creates a structured build plan.
+  </Step>
+  <Step title="Build Agent generates code">
+    The Build Agent creates your complete application: database models, user interface, and all the logic.
+  </Step>
+  <Step title="Validation ensures quality">
+    Before delivering your app, validation checks catch common issues and ensure everything works.
+  </Step>
+  <Step title="Your app is ready">
+    A fully functional application is ready to use immediately.
+  </Step>
+</Steps>
+
+## What makes this different?
+
+Unlike simple AI code generators, Gainable creates **complete, production-ready applications**:
+
+| Traditional AI Code | Gainable |
+|---------------------|----------|
+| Generates code snippets | Generates complete apps |
+| You assemble the pieces | Everything is connected |
+| Basic text completion | Specialized agents with deep expertise |
+| Generic output | Follows proven patterns |
+
+## The agent system
+
+Gainable uses multiple AI agents, each specialized for a specific task:
+
+<CardGroup cols={2}>
+  <Card title="Planner Agent" icon="clipboard-list">
+    Analyzes your request and creates a detailed build plan. Identifies data models, views, and features needed.
+  </Card>
+  <Card title="Build Agent" icon="hammer">
+    Generates the actual code for your application. Creates database models, routes, and user interfaces.
+  </Card>
+  <Card title="Validation Agent" icon="shield-check">
+    Checks generated code for common issues and ensures it follows best practices.
+  </Card>
+  <Card title="Conversation Agent" icon="comments">
+    Answers questions about your project and helps you understand what was built.
+  </Card>
+</CardGroup>
+
+## What happens when you send a prompt
+
+Let's follow a real example through the system:
+
+<Accordion title="Example: 'Build a task tracker with due dates and priorities'">
+**1. Planner Agent receives your request**
+
+The Planner identifies:
+- You need a Task data model
+- Fields: title, description, due date, priority
+- You'll need a view to manage tasks
+- CRUD operations (create, read, update, delete)
+
+**2. Plan is created**
+
+```
+Summary: Build task tracker with due dates and priority levels
+
+Features:
+- Task management (add, edit, delete tasks)
+- Due date tracking
+- Priority levels (low, medium, high)
+- Task list view
+
+Data model:
+- Task: title, description, dueDate, priority, completed
+```
+
+**3. Build Agent generates code**
+
+The Build Agent creates:
+- Database model for Task
+- API routes for CRUD operations
+- A task list view with forms
+- Priority badges and date formatting
+
+**4. Validation runs**
+
+Checks ensure:
+- All fields are properly connected
+- Forms save data correctly
+- The interface works on mobile
+
+**5. Your app is ready**
+
+You now have a working task tracker you can use immediately.
+</Accordion>
+
+## How iteration works
+
+Gainable remembers everything about your project. When you ask for changes:
+
+1. **Context is preserved** - The AI knows what's already built
+2. **Existing features are protected** - New additions don't break what works
+3. **Changes are targeted** - Only the relevant parts are modified
+
+<Tip>
+This means you can build incrementally. Start with something simple, then add features one at a time. Each change builds on what came before.
+</Tip>
+
+## Technical foundation
+
+Every Gainable app is built on a proven tech stack:
+
+| Layer | Technology | What it does |
+|-------|------------|--------------|
+| **Database** | MongoDB | Stores all your data flexibly |
+| **Backend** | Node.js + Express | Handles data operations |
+| **Frontend** | Modern HTML/CSS/JS | Beautiful, responsive interface |
+| **Real-time** | Socket.IO | Instant updates across users |
+| **UI Components** | DaisyUI + Tailwind | Polished, themeable design |
+| **Collaboration** | Weavy | Chat, files, and comments |
+
+<Note>
+You don't need to know any of these technologies to use Gainable. This is just what powers your apps behind the scenes.
+</Note>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Meet the agents" icon="users" href="/concepts/agents">
+    Deep dive into each AI agent and what they do
+  </Card>
+  <Card title="Explore skills" icon="wand-magic-sparkles" href="/concepts/skills">
+    Discover built-in features you can request
+  </Card>
+</CardGroup>

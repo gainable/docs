@@ -1,0 +1,238 @@
+---
+title: "Data Models"
+description: "How Gainable organizes and stores your application data"
+---
+
+## Understanding data in Gainable
+
+When you describe data in your prompts, Gainable creates **data models** - structured definitions of what information your app stores. Think of a data model as a template for each type of thing you're tracking.
+
+## What is a data model?
+
+A data model defines:
+- **What fields** each item has (name, email, status, etc.)
+- **What type** each field is (text, number, date, etc.)
+- **How items relate** to other items (belongs to, has many)
+
+<Accordion title="Example: Deal model">
+When you say "track deals with name, amount, and status", Gainable creates a Deal model:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| name | Text | The deal name |
+| amount | Number | The deal value |
+| status | Options | Selected from predefined choices |
+| createdAt | Date | Automatically added |
+| updatedAt | Date | Automatically added |
+</Accordion>
+
+## Field types
+
+When describing your data, you can specify field types to get exactly what you need:
+
+### Text fields
+
+For names, descriptions, and other text content.
+
+```text
+Prompt: "title (text)" or just "title"
+Stores: Any text content
+Example: "Enterprise License Renewal"
+```
+
+### Number fields
+
+For quantities, amounts, and measurements.
+
+```text
+Prompt: "quantity (number)" or "amount"
+Stores: Numeric values
+Example: 42, 3.14, 1000000
+```
+
+### Currency fields
+
+For money values with proper formatting.
+
+```text
+Prompt: "price (currency)" or "amount in dollars"
+Stores: Numeric value
+Displays: $1,234.56
+```
+
+### Date fields
+
+For dates and timestamps.
+
+```text
+Prompt: "due date" or "created date"
+Stores: Date and time
+Displays: Formatted date
+```
+
+### Option fields (Enums)
+
+For selecting from a predefined list.
+
+```text
+Prompt: "status (new, in progress, done)"
+Stores: One of the specified options
+Displays: Dropdown or badges
+```
+
+### Yes/No fields (Boolean)
+
+For true/false values.
+
+```text
+Prompt: "is active (yes/no)" or "completed (checkbox)"
+Stores: True or false
+Displays: Checkbox or toggle
+```
+
+### Reference fields
+
+For linking to other data models.
+
+```text
+Prompt: "assigned to (user)" or "belongs to company"
+Stores: Link to another item
+Displays: Name or selector
+```
+
+## Relationships between data
+
+### One-to-Many
+
+One item has multiple related items.
+
+```text
+"Each project has many tasks"
+"Tasks belong to a project"
+```
+
+This creates:
+- Project model (parent)
+- Task model with a "project" field linking to Project
+
+### Many-to-One
+
+Multiple items link to one item.
+
+```text
+"Contacts belong to a company"
+"Deals are linked to a contact"
+```
+
+### Self-referential
+
+Items that reference the same type.
+
+```text
+"Each employee has a manager (another employee)"
+"Tasks can have subtasks"
+```
+
+## Automatic fields
+
+Every data model automatically includes:
+
+| Field | Purpose |
+|-------|---------|
+| `_id` | Unique identifier for each item |
+| `createdAt` | When the item was created |
+| `updatedAt` | When the item was last modified |
+
+You don't need to ask for these - they're always there.
+
+## Best practices
+
+### Be explicit about fields
+
+<CodeGroup>
+```text Good
+Build a contact manager with:
+- Full name
+- Email address
+- Phone number
+- Company
+- Job title
+- Notes
+```
+
+```text Vague
+Build a contact manager
+```
+</CodeGroup>
+
+### Specify options for status fields
+
+<CodeGroup>
+```text Good
+Status options: draft, pending, approved, rejected
+```
+
+```text Vague
+Add a status field
+```
+</CodeGroup>
+
+### Name relationships clearly
+
+<CodeGroup>
+```text Good
+Each task belongs to one project
+Each project has many tasks
+Tasks can be assigned to one user
+```
+
+```text Confusing
+Tasks, projects, and users are related
+```
+</CodeGroup>
+
+### Use meaningful field names
+
+<CodeGroup>
+```text Good
+closeDate, expectedRevenue, primaryContact
+```
+
+```text Confusing
+date1, field2, ref
+```
+</CodeGroup>
+
+## Viewing your data
+
+Once your app is built, you can:
+
+- **See all items** in list views
+- **Add new items** through forms
+- **Edit items** by clicking on them
+- **Delete items** with confirmation
+- **Filter and search** to find specific items
+
+## Data persistence
+
+All data in Gainable apps is:
+
+- **Automatically saved** when you create or edit items
+- **Persistent** across sessions and users
+- **Backed up** regularly
+- **Accessible** via API endpoints
+
+<Note>
+You don't need to worry about "saving" - data is stored as soon as you submit a form or complete an action.
+</Note>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Views" icon="window" href="/building/views">
+    How your data is displayed
+  </Card>
+  <Card title="Real-time" icon="bolt" href="/building/real-time">
+    Live data updates
+  </Card>
+</CardGroup>

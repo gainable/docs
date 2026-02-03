@@ -1,0 +1,384 @@
+---
+title: "Common Patterns"
+description: "Templates for building common types of applications"
+---
+
+## Pattern templates
+
+These are reusable templates for common app types. Fill in the blanks to create your own version.
+
+---
+
+## CRUD Application
+
+The most basic pattern: Create, Read, Update, Delete.
+
+```text
+Build a [thing] tracker with:
+- [field 1] (text)
+- [field 2] (text/number/date)
+- [field 3] (options: option1, option2, option3)
+- [field 4] (yes/no)
+
+Features:
+- List all [things]
+- Add new [thing]
+- Edit existing [thing]
+- Delete [thing]
+```
+
+<Accordion title="Example: Bug tracker">
+```text
+Build a bug tracker with:
+- Title (text)
+- Description (text)
+- Severity (options: low, medium, high, critical)
+- Resolved (yes/no)
+
+Features:
+- List all bugs
+- Add new bug
+- Edit existing bug
+- Delete bug
+```
+</Accordion>
+
+---
+
+## Dashboard Application
+
+Data overview with KPIs and charts.
+
+```text
+Build a [domain] dashboard showing:
+
+KPI Cards:
+- Total [things] count
+- [Things] with [status] count
+- Total [numeric field] sum
+- Average [numeric field]
+
+Charts:
+- [Things] by [category field] (pie chart)
+- [Things] over time (line chart)
+- [Numeric field] by [category] (bar chart)
+
+Recent activity:
+- Last 10 [things] added
+```
+
+<Accordion title="Example: Sales dashboard">
+```text
+Build a sales dashboard showing:
+
+KPI Cards:
+- Total deals count
+- Deals won count
+- Total pipeline value
+- Average deal size
+
+Charts:
+- Deals by status (pie chart)
+- Revenue over time (line chart)
+- Revenue by region (bar chart)
+
+Recent activity:
+- Last 10 deals added
+```
+</Accordion>
+
+---
+
+## Kanban / Pipeline
+
+Workflow management with drag-and-drop.
+
+```text
+Build a [thing] board with columns:
+- [Status 1]
+- [Status 2]
+- [Status 3]
+- [Status 4]
+
+Each [thing] card shows:
+- [Primary field]
+- [Secondary field]
+- [Badge/tag field]
+
+Features:
+- Drag [things] between columns to update status
+- Click card to edit details
+- Add new [thing] to any column
+- Real-time sync
+```
+
+<Accordion title="Example: Hiring pipeline">
+```text
+Build a hiring pipeline with columns:
+- Applied
+- Phone Screen
+- Interview
+- Offer
+- Hired
+
+Each candidate card shows:
+- Name
+- Position applying for
+- Source (referral, LinkedIn, etc)
+
+Features:
+- Drag candidates between columns to update status
+- Click card to edit details
+- Add new candidate to any column
+- Real-time sync
+```
+</Accordion>
+
+---
+
+## Master-Detail
+
+List of items with detailed view.
+
+```text
+Build a [thing] manager where:
+
+[Things] have:
+- [field 1], [field 2], [field 3]
+- Status: [status options]
+
+Each [thing] has many [sub-things]:
+- [sub-field 1], [sub-field 2]
+- Linked to parent [thing]
+
+Views:
+- [Things] list page (shows count of [sub-things])
+- [Thing] detail page showing:
+  - All [thing] info
+  - List of [sub-things]
+  - Add/edit/delete [sub-things]
+```
+
+<Accordion title="Example: Project with tasks">
+```text
+Build a project manager where:
+
+Projects have:
+- Name, description, status
+- Status: active, on hold, complete
+
+Each project has many tasks:
+- Title, due date, completed
+- Linked to parent project
+
+Views:
+- Projects list page (shows count of tasks)
+- Project detail page showing:
+  - All project info
+  - List of tasks
+  - Add/edit/delete tasks
+```
+</Accordion>
+
+---
+
+## Multi-Entity CRM
+
+Multiple related data types.
+
+```text
+Build a [domain] system where:
+
+[Entity A] has:
+- [fields...]
+- Status: [options]
+
+[Entity B] has:
+- [fields...]
+- Belongs to one [Entity A]
+
+[Entity C] has:
+- [fields...]
+- Linked to [Entity A] and [Entity B]
+
+Views:
+- [Entity A] list and detail pages
+- [Entity B] list with [Entity A] filter
+- [Entity C] kanban board
+- Dashboard with totals and charts
+```
+
+<Accordion title="Example: Real estate CRM">
+```text
+Build a real estate CRM where:
+
+Properties have:
+- Address, price, bedrooms, bathrooms
+- Status: available, pending, sold
+
+Clients have:
+- Name, email, phone, budget range
+- Looking for: buy, rent
+
+Showings have:
+- Date, time, notes
+- Linked to a property and a client
+
+Views:
+- Properties list and detail pages
+- Clients list with budget filter
+- Showings calendar view
+- Dashboard with totals and charts
+```
+</Accordion>
+
+---
+
+## Form + Workflow
+
+Data collection with status progression.
+
+```text
+Build a [thing] submission system:
+
+[Things] have:
+- [Form fields...]
+- Status: draft, submitted, under review, approved, rejected
+- Submitted by (user)
+- Reviewed by (user)
+- Submission date
+
+Workflow:
+1. User creates [thing] in draft
+2. User submits for review
+3. Reviewer approves or rejects
+4. User can see all their [things] and status
+
+Admin dashboard:
+- Pending reviews count
+- [Things] by status
+- Recent submissions
+```
+
+<Accordion title="Example: Expense reports">
+```text
+Build an expense report system:
+
+Expenses have:
+- Description, amount, category, receipt image
+- Status: draft, submitted, under review, approved, rejected
+- Submitted by (user)
+- Reviewed by (manager)
+- Submission date
+
+Workflow:
+1. User creates expense in draft
+2. User submits for review
+3. Manager approves or rejects
+4. User can see all their expenses and status
+
+Admin dashboard:
+- Pending reviews count
+- Expenses by status
+- Recent submissions
+```
+</Accordion>
+
+---
+
+## Booking / Reservation
+
+Time-based scheduling.
+
+```text
+Build a [thing] booking system:
+
+[Resources] have:
+- Name, description
+- Availability hours
+- [Other attributes]
+
+[Bookings] have:
+- [Resource] selected
+- Date and time
+- Duration
+- [Booker info]
+- Status: confirmed, cancelled
+
+Features:
+- Calendar view of bookings
+- Check availability before booking
+- Confirmation notifications
+- Manage my bookings
+```
+
+<Accordion title="Example: Meeting room booking">
+```text
+Build a meeting room booking system:
+
+Rooms have:
+- Name, capacity, amenities
+- Building/floor
+- Availability hours
+
+Bookings have:
+- Room selected
+- Date and time
+- Duration (30min, 1hr, 2hr)
+- Booked by, attendees count
+- Status: confirmed, cancelled
+
+Features:
+- Calendar view of room bookings
+- Check availability before booking
+- Confirmation notifications
+- Manage my bookings
+```
+</Accordion>
+
+---
+
+## Using these patterns
+
+<Steps>
+  <Step title="Choose a pattern">
+    Pick the template closest to what you want to build
+  </Step>
+  <Step title="Fill in the blanks">
+    Replace bracketed text with your specific details
+  </Step>
+  <Step title="Add or remove">
+    Customize fields, features, and views to match your needs
+  </Step>
+  <Step title="Start simple">
+    Build the basic version first, then add features
+  </Step>
+</Steps>
+
+## Combining patterns
+
+You can combine multiple patterns:
+
+```text
+Build a customer success platform with:
+
+[Master-Detail Pattern]
+Accounts with contacts and activities
+
+[Kanban Pattern]
+Support tickets on a status board
+
+[Dashboard Pattern]
+KPIs and charts for health metrics
+```
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Examples" icon="lightbulb" href="/prompting/examples">
+    See complete prompt examples
+  </Card>
+  <Card title="Best practices" icon="star" href="/prompting/best-practices">
+    Write better prompts
+  </Card>
+</CardGroup>

@@ -1,0 +1,349 @@
+---
+title: "Examples"
+description: "Real prompts you can copy and adapt for your projects"
+---
+
+## Copy-and-adapt prompts
+
+These are real prompts that produce great results. Copy them and modify the specifics for your use case.
+
+---
+
+## CRM / Sales
+
+### Basic deal tracker
+
+```text
+Build a deal tracker with:
+- Deal name
+- Company name
+- Amount (currency)
+- Status: new, proposal, negotiation, won, lost
+- Expected close date
+- Contact name and email
+
+Show a dashboard with:
+- Total pipeline value
+- Deals won this month
+- Pie chart of deals by status
+```
+
+### Full CRM with contacts
+
+```text
+Build a CRM where:
+
+Companies have:
+- Name, industry, website
+- Size (small, medium, large, enterprise)
+- Status (prospect, customer, churned)
+
+Contacts have:
+- Name, email, phone, job title
+- Each contact belongs to one company
+
+Deals have:
+- Name, amount, status, close date
+- Linked to a company and a primary contact
+
+I need:
+- Company list page
+- Contact list page
+- Deal pipeline as a kanban board
+- Dashboard with total revenue and deals by status
+```
+
+---
+
+## Project Management
+
+### Task tracker
+
+```text
+Build a task tracker with:
+- Task title and description
+- Status: to do, in progress, done
+- Priority: low, medium, high
+- Due date
+- Assigned to (user selection)
+
+Features:
+- Kanban board view by status
+- Filter by priority and assignee
+- Real-time updates
+```
+
+### Project with phases
+
+```text
+Build a project tracker where:
+
+Projects have:
+- Name, description, status
+- Start date and target end date
+- Project manager (user)
+
+Each project has multiple milestones:
+- Milestone name
+- Target date
+- Status: pending, complete
+
+Each milestone has multiple tasks:
+- Task name
+- Status: not started, in progress, complete
+- Assigned to
+
+Show:
+- Project list with progress percentage
+- Project detail page with milestones
+- Gantt-style timeline would be nice
+```
+
+---
+
+## Inventory / Products
+
+### Product catalog
+
+```text
+Build a product catalog with:
+- Product name and SKU
+- Category (electronics, clothing, home, other)
+- Price (currency)
+- Quantity in stock
+- Reorder point
+- Active (yes/no)
+
+Dashboard showing:
+- Total products count
+- Low stock alerts (below reorder point)
+- Products by category (pie chart)
+- Inventory value total
+```
+
+### Order tracking
+
+```text
+Build an order tracking system:
+
+Products have:
+- Name, SKU, price
+
+Orders have:
+- Order number (auto-generated)
+- Customer name and email
+- Status: pending, processing, shipped, delivered
+- Order date
+- Total amount
+
+Order items:
+- Linked to an order
+- Product selected from products
+- Quantity
+- Line total
+
+Features:
+- Order list with status filter
+- Order detail page showing items
+- Dashboard with order totals
+```
+
+---
+
+## Events / Bookings
+
+### Event management
+
+```text
+Build an event manager with:
+
+Events have:
+- Name, description
+- Date and time
+- Location
+- Capacity (number)
+- Status: draft, published, cancelled
+
+Registrations have:
+- Linked to an event
+- Attendee name and email
+- Registration date
+- Status: confirmed, waitlist, cancelled
+
+Show:
+- Event list page
+- Event detail with registration count
+- Add registration form
+- Export attendee list option
+```
+
+### Appointment scheduler
+
+```text
+Build an appointment scheduler:
+
+Services have:
+- Name, duration (minutes), price
+
+Appointments have:
+- Client name, email, phone
+- Service (selected from services)
+- Date and time
+- Status: scheduled, completed, cancelled, no-show
+- Notes
+
+Dashboard:
+- Today's appointments
+- This week's revenue
+- Appointments by status (chart)
+```
+
+---
+
+## HR / Team
+
+### Employee directory
+
+```text
+Build an employee directory with:
+- Name, email, phone
+- Department: engineering, sales, marketing, operations, HR
+- Job title
+- Start date
+- Manager (another employee)
+- Status: active, on leave, departed
+
+Features:
+- Search by name
+- Filter by department
+- Org chart view would be nice
+- Employee detail page
+```
+
+### Time off tracker
+
+```text
+Build a time off tracker:
+
+Time off requests have:
+- Employee name
+- Type: vacation, sick, personal, other
+- Start date and end date
+- Status: pending, approved, rejected
+- Notes
+- Reviewed by (manager)
+
+Dashboard:
+- Pending requests count
+- Approved days this month
+- Requests by type (chart)
+
+Features:
+- Filter by status
+- Calendar view of approved time off
+```
+
+---
+
+## Adding features to existing apps
+
+### Add charts to any app
+
+```text
+Add a dashboard with:
+- Total [items] count (KPI card)
+- [Items] by [status field] (pie chart)
+- [Items] created per month (line chart)
+- [Numeric field] total (KPI card)
+```
+
+### Add kanban view
+
+```text
+Add a kanban board view for [items] where:
+- Columns are the [status field] values
+- Cards show [field 1], [field 2], and [field 3]
+- Dragging a card updates its status
+```
+
+### Add collaboration
+
+```text
+Add a team chat to the [page name] page where
+users can discuss [context].
+```
+
+### Add filtering
+
+```text
+Add filters to the [page name]:
+- Filter by [field 1] (dropdown)
+- Filter by [field 2] (date range)
+- Search by [field 3] (text search)
+```
+
+### Add real-time updates
+
+```text
+Make the [items] list update in real-time so
+all users see changes immediately without refreshing.
+```
+
+---
+
+## Design customization
+
+### Apply a theme
+
+```text
+Change the app theme to [theme name].
+```
+
+Available themes: light, dark, cupcake, corporate, retro, cyberpunk, valentine, garden, forest, lofi, pastel, fantasy, luxury, autumn, business, night, winter, nord, emerald
+
+### Customize colors
+
+```text
+Use a purple and gray color scheme with
+a professional, corporate feel.
+```
+
+### Change layout
+
+```text
+Add a sidebar navigation with links to:
+- Dashboard
+- [Page 1]
+- [Page 2]
+- Settings
+```
+
+---
+
+## Tips for adapting these prompts
+
+<AccordionGroup>
+  <Accordion title="Replace the bracketed parts">
+    Anywhere you see `[something]`, replace it with your specific details.
+  </Accordion>
+  <Accordion title="Add or remove fields">
+    These are starting points. Add fields you need, remove ones you don't.
+  </Accordion>
+  <Accordion title="Combine patterns">
+    Mix and match sections from different examples.
+  </Accordion>
+  <Accordion title="Build incrementally">
+    Start with the basic version, then add features in follow-up prompts.
+  </Accordion>
+</AccordionGroup>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Common patterns" icon="copy" href="/prompting/common-patterns">
+    Templates organized by app type
+  </Card>
+  <Card title="Best practices" icon="star" href="/prompting/best-practices">
+    Detailed dos and don'ts
+  </Card>
+</CardGroup>

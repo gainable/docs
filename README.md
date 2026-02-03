@@ -1,43 +1,67 @@
-# Mintlify Starter Kit
+# Gainable Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+This repository contains the documentation for [Gainable](https://app.gainable.ai), the AI-powered no-code app builder.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
-
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+## Documentation Structure
 
 ```
-npm i -g mint
+docs/
+├── introduction.mdx          # Platform overview
+├── quickstart.mdx            # First app in 5 minutes
+│
+├── concepts/
+│   ├── how-it-works.mdx      # How Gainable builds apps
+│   ├── agents.mdx            # AI agent system
+│   └── skills.mdx            # Built-in capabilities
+│
+├── prompting/
+│   ├── overview.mdx          # Prompt strategy fundamentals
+│   ├── best-practices.mdx    # Writing effective prompts
+│   ├── examples.mdx          # Real prompt examples
+│   └── common-patterns.mdx   # Templates for common apps
+│
+├── building/
+│   ├── data-models.mdx       # Data and schemas
+│   ├── views.mdx             # UI and pages
+│   ├── real-time.mdx         # Live updates
+│   └── collaboration.mdx     # Chat, files, comments
+│
+├── skills/
+│   ├── chartjs.mdx           # Data visualization
+│   ├── kanban.mdx            # Drag-drop boards
+│   ├── weavy.mdx             # Collaboration features
+│   └── design.mdx            # Themes and styling
+│
+└── reference/
+    ├── api.mdx               # Generated app APIs
+    └── troubleshooting.mdx   # Common issues
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+## Local Development
 
-```
-mint dev
-```
+1. Install the Mintlify CLI:
+   ```bash
+   npm i -g mintlify
+   ```
 
-View your local preview at `http://localhost:3000`.
+2. Run the local development server:
+   ```bash
+   mintlify dev
+   ```
 
-## Publishing changes
+3. Open `http://localhost:3000` to preview the docs.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## Deployment
 
-## Need help?
+Documentation is automatically deployed when changes are pushed to the main branch.
 
-### Troubleshooting
+## Contributing
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+1. Make changes to the relevant `.mdx` files
+2. Preview locally with `mintlify dev`
+3. Create a pull request
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+## Resources
+
+- [Mintlify Documentation](https://mintlify.com/docs)
+- [Gainable App](https://app.gainable.ai)

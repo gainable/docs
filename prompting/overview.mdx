@@ -1,0 +1,201 @@
+---
+title: "Prompt Strategy"
+description: "How to talk to Gainable for the best results"
+---
+
+## The art of prompting
+
+Gainable understands natural language, but how you describe things affects what you get. This guide will help you write prompts that produce exactly what you want.
+
+## The golden rule
+
+<Note>
+**Be specific about your data, clear about relationships, and explicit about features.**
+
+The more specific your prompt, the more accurate your app.
+</Note>
+
+## Five key principles
+
+### 1. Name your fields explicitly
+
+Tell Gainable exactly what data you want to track.
+
+<CodeGroup>
+```text Good
+Build a contact manager with:
+- Name, email, phone number
+- Company they work for
+- Job title
+- Last contacted date
+```
+
+```text Vague
+Build something to track contacts
+```
+</CodeGroup>
+
+Why this matters: When you name fields, Gainable creates exactly those fields. When you're vague, it has to guess.
+
+### 2. Describe relationships
+
+If data is connected, say how.
+
+<CodeGroup>
+```text Good
+Build a CRM where:
+- Companies have a name, industry, and size
+- Contacts belong to a company
+- Deals are linked to both a company and a contact
+```
+
+```text Missing relationships
+Track companies, contacts, and deals
+```
+</CodeGroup>
+
+Common relationship patterns:
+- "X belongs to Y" - Each X is linked to one Y
+- "X has many Y" - One X can have multiple Y items
+- "X and Y are linked" - They reference each other
+
+### 3. Describe the user journey
+
+Explain how people will actually use the app.
+
+<CodeGroup>
+```text Good
+Users should be able to:
+1. Create a new project
+2. Add tasks to that project
+3. Assign tasks to team members
+4. Mark tasks as complete
+5. See a progress dashboard
+```
+
+```text Unclear
+Make a project tracker
+```
+</CodeGroup>
+
+### 4. Request features by name
+
+Use specific feature names when you know what you want.
+
+| Instead of... | Say... |
+|--------------|--------|
+| "Show the data graphically" | "Add a pie chart showing deals by status" |
+| "Make it organized" | "Add a kanban board with columns" |
+| "Let people talk" | "Add a team chat" |
+| "Make it sortable" | "Let me drag to reorder items" |
+
+### 5. Iterate incrementally
+
+Build your app step by step instead of all at once.
+
+<Steps>
+  <Step title="Start with the basics">
+    "Build a task tracker with title, description, and status"
+  </Step>
+  <Step title="Add more fields">
+    "Add due date and priority to tasks"
+  </Step>
+  <Step title="Add visualization">
+    "Add a dashboard with a chart showing tasks by status"
+  </Step>
+  <Step title="Add advanced features">
+    "Add a kanban board view"
+  </Step>
+</Steps>
+
+<Tip>
+Incremental building is more reliable than trying to specify everything upfront. Each step is smaller and easier for Gainable to get right.
+</Tip>
+
+## Prompt structure
+
+A well-structured prompt typically has three parts:
+
+### 1. What you're building (the entity)
+
+```text
+Build a [thing] tracker...
+Create a [thing] management system...
+I need to track [things]...
+```
+
+### 2. What data it stores (the fields)
+
+```text
+...with [field 1], [field 2], and [field 3]
+...including name, status, and due date
+...that has title, description, priority, and assignee
+```
+
+### 3. What you can do with it (the features)
+
+```text
+...and a dashboard showing totals
+...with a kanban board for status
+...where I can filter by date
+```
+
+## Complete example
+
+Here's a well-structured prompt that combines all principles:
+
+```text
+Build a customer support ticket system where:
+
+Tickets have:
+- Title and description
+- Priority (low, medium, high, urgent)
+- Status (new, in progress, resolved, closed)
+- Customer email
+- Assigned agent
+- Created date
+
+I should be able to:
+- Create new tickets
+- Assign tickets to agents
+- Update ticket status
+- Add comments to tickets
+
+Show a dashboard with:
+- Total open tickets count
+- Tickets by priority (pie chart)
+- Tickets by status (bar chart)
+- Recent tickets list
+
+Use a kanban board for the main ticket view, organized by status.
+```
+
+This prompt is specific about data, clear about features, and describes the user journey.
+
+## What to avoid
+
+<Warning>
+These patterns lead to unpredictable results:
+</Warning>
+
+| Don't | Do instead |
+|-------|------------|
+| "Make me a CRM" | "Track deals with company, amount, status, and close date" |
+| "Add some charts" | "Add a pie chart showing deals by status" |
+| "Make it pretty" | "Use the cupcake theme" |
+| "Like Salesforce" | Describe the specific features you need |
+| Everything in one prompt | Build incrementally |
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Best practices" icon="star" href="/prompting/best-practices">
+    Detailed dos and don'ts
+  </Card>
+  <Card title="Examples" icon="lightbulb" href="/prompting/examples">
+    Real prompts you can copy
+  </Card>
+  <Card title="Common patterns" icon="copy" href="/prompting/common-patterns">
+    Templates for common app types
+  </Card>
+</CardGroup>

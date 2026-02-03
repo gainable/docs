@@ -1,0 +1,224 @@
+---
+title: "API Reference"
+description: "Understanding the APIs in your generated apps"
+---
+
+## Overview
+
+Every Gainable app includes automatically generated API endpoints. These APIs power your app's functionality and can be used by external integrations.
+
+<Note>
+You don't need to know about APIs to use Gainable. This reference is for users who want to understand how their apps work internally or integrate with external systems.
+</Note>
+
+## API structure
+
+For each data model you create, Gainable generates RESTful endpoints:
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/{model}` | GET | List all items |
+| `/api/{model}` | POST | Create new item |
+| `/api/{model}/:id` | GET | Get single item |
+| `/api/{model}/:id` | PUT | Update item |
+| `/api/{model}/:id` | DELETE | Delete item |
+
+### Example
+
+If you create a Deal model, you get:
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/deal` | GET | List all deals |
+| `/api/deal` | POST | Create new deal |
+| `/api/deal/:id` | GET | Get specific deal |
+| `/api/deal/:id` | PUT | Update deal |
+| `/api/deal/:id` | DELETE | Delete deal |
+
+## Response format
+
+All API responses follow this structure:
+
+### Success response
+
+```json
+{
+  "success": true,
+  "data": {
+    "_id": "507f1f77bcf86cd799439011",
+    "name": "Enterprise License",
+    "amount": 50000,
+    "status": "won",
+    "createdAt": "2024-01-15T10:30:00.000Z",
+    "updatedAt": "2024-01-15T10:30:00.000Z"
+  }
+}
+```
+
+### List response
+
+```json
+{
+  "success": true,
+  "data": [
+    { "_id": "...", "name": "Deal 1", ... },
+    { "_id": "...", "name": "Deal 2", ... }
+  ]
+}
+```
+
+### Error response
+
+```json
+{
+  "success": false,
+  "error": "Deal not found"
+}
+```
+
+## Common operations
+
+### Create an item
+
+```bash
+POST /api/deal
+Content-Type: application/json
+
+{
+  "name": "Enterprise License",
+  "amount": 50000,
+  "status": "new"
+}
+```
+
+### Update an item
+
+```bash
+PUT /api/deal/507f1f77bcf86cd799439011
+Content-Type: application/json
+
+{
+  "status": "won"
+}
+```
+
+### Delete an item
+
+```bash
+DELETE /api/deal/507f1f77bcf86cd799439011
+```
+
+## Filtering
+
+Most list endpoints support query parameters for filtering:
+
+```bash
+# Filter by status
+GET /api/deal?status=won
+
+# Filter by multiple fields
+GET /api/deal?status=won&amount[$gte]=10000
+
+# Sort results
+GET /api/deal?sort=-createdAt
+
+# Limit results
+GET /api/deal?limit=10
+```
+
+## Real-time events
+
+When data changes, the server broadcasts events via WebSocket:
+
+| Event | Payload | When |
+|-------|---------|------|
+| `{model}:created` | New item | Item is created |
+| `{model}:updated` | Updated item | Item is modified |
+| `{model}:deleted` | Deleted item ID | Item is deleted |
+
+### Example events
+
+```javascript
+// Listen for new deals
+socket.on('deal:created', (deal) => {
+  console.log('New deal:', deal);
+});
+
+// Listen for updates
+socket.on('deal:updated', (deal) => {
+  console.log('Deal updated:', deal);
+});
+
+// Listen for deletions
+socket.on('deal:deleted', (data) => {
+  console.log('Deal deleted:', data._id);
+});
+```
+
+## Authentication
+
+API requests require authentication. Your app handles this automatically through session cookies when accessed through the browser.
+
+For external integrations, contact support for API key access.
+
+## Rate limits
+
+APIs have reasonable rate limits to ensure stability:
+
+- **Standard**: 100 requests per minute
+- **Bulk operations**: 10 requests per minute
+
+If you hit a rate limit, you'll receive a 429 response.
+
+## Data types
+
+### Automatic fields
+
+Every item includes:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `_id` | ObjectId | Unique identifier |
+| `createdAt` | Date | Creation timestamp |
+| `updatedAt` | Date | Last update timestamp |
+
+### Reference fields
+
+When models reference each other, the API returns IDs:
+
+```json
+{
+  "_id": "507f1f77bcf86cd799439011",
+  "title": "Task 1",
+  "project": "507f1f77bcf86cd799439012"
+}
+```
+
+Use the project ID to fetch the related project.
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Use the UI when possible">
+    The app's UI is the easiest way to interact with your data. Use APIs only when you need external integration.
+  </Accordion>
+
+  <Accordion title="Handle errors gracefully">
+    Check for `success: false` responses and handle them appropriately.
+  </Accordion>
+
+  <Accordion title="Use real-time events">
+    Instead of polling, listen for WebSocket events to get instant updates.
+  </Accordion>
+</AccordionGroup>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Data models" icon="database" href="/building/data-models">
+    Understanding your data structure
+  </Card>
+  <Card title="Real-time updates" icon="bolt" href="/building/real-time">
+    How real-time sync works
+  </Card>
+</CardGroup>

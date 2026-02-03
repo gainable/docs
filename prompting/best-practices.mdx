@@ -1,0 +1,297 @@
+---
+title: "Best Practices"
+description: "Dos and don'ts for writing effective prompts"
+---
+
+## Do this
+
+### Be specific about data fields
+
+<CodeGroup>
+```text Do this
+Track contacts with:
+- Full name
+- Email address
+- Phone number
+- Company name
+- Job title
+- LinkedIn profile URL
+```
+
+```text Don't do this
+Track contact information
+```
+</CodeGroup>
+
+### Specify field types when it matters
+
+<CodeGroup>
+```text Do this
+Track deals with:
+- Deal name (text)
+- Amount (currency)
+- Close date (date)
+- Probability (percentage)
+- Status (new, negotiating, won, lost)
+```
+
+```text Don't do this
+Track deals with name, amount, date, probability, status
+```
+</CodeGroup>
+
+Common field types to specify:
+- **Currency**: "amount (currency)" or "price in dollars"
+- **Date**: "due date" or "close date"
+- **Percentage**: "probability (percentage)"
+- **Options**: "status (option A, option B, option C)"
+- **Yes/No**: "is active (yes/no)" or "completed (checkbox)"
+
+### Describe relationships clearly
+
+<CodeGroup>
+```text Do this
+Build a project system where:
+- Projects have a name and description
+- Each project has multiple tasks
+- Tasks have a title, due date, and status
+- Each task is assigned to one user
+```
+
+```text Don't do this
+Track projects, tasks, and users
+```
+</CodeGroup>
+
+### Request specific visualizations
+
+<CodeGroup>
+```text Do this
+Add a dashboard with:
+- Total revenue card
+- Number of deals card
+- Pie chart showing deals by status
+- Line chart showing monthly revenue trend
+```
+
+```text Don't do this
+Add a dashboard with some charts
+```
+</CodeGroup>
+
+### Define options explicitly
+
+<CodeGroup>
+```text Do this
+Status options: draft, pending review, approved, rejected
+Priority levels: low, medium, high, critical
+```
+
+```text Don't do this
+Add status and priority fields
+```
+</CodeGroup>
+
+---
+
+## Don't do this
+
+### Don't reference other products
+
+<CodeGroup>
+```text Don't do this
+Build something like Asana
+Make it work like Notion
+Copy the Salesforce pipeline
+```
+
+```text Do this instead
+Build a task manager with:
+- Projects containing tasks
+- Tasks with title, assignee, due date, status
+- Kanban board view
+- List view with filters
+```
+</CodeGroup>
+
+Why: Gainable doesn't know what features you want from those products. Describe the specific features you need.
+
+### Don't use vague design terms
+
+<CodeGroup>
+```text Don't do this
+Make it modern
+Keep it clean
+Professional looking
+```
+
+```text Do this instead
+Use the corporate theme
+Use blue and gray colors
+Use a sidebar navigation layout
+```
+</CodeGroup>
+
+### Don't request everything at once
+
+<CodeGroup>
+```text Don't do this
+Build a complete CRM with leads, contacts, companies,
+deals, tasks, emails, calendar, reports, dashboards,
+team management, permissions, notifications, and
+mobile app with offline support.
+```
+
+```text Do this instead
+Build a deal tracker with:
+- Deals (name, amount, status, close date)
+- Contacts (name, email, linked to deal)
+- Dashboard with deal totals
+
+(Then add more features in subsequent prompts)
+```
+</CodeGroup>
+
+### Don't assume Gainable knows your domain
+
+<CodeGroup>
+```text Don't do this
+Build a standard e-commerce checkout flow
+Add the usual project management features
+```
+
+```text Do this instead
+Build checkout with:
+- Cart review step
+- Shipping address form
+- Payment method selection
+- Order confirmation page
+```
+</CodeGroup>
+
+---
+
+## Updating existing apps
+
+When modifying an app you've already built:
+
+### Reference existing elements
+
+<CodeGroup>
+```text Good
+Add a due date field to the Task model
+```
+
+```text Less clear
+Add due dates
+```
+</CodeGroup>
+
+### Specify where to make changes
+
+<CodeGroup>
+```text Good
+On the deals page, add a filter dropdown for status
+```
+
+```text Ambiguous
+Add filtering
+```
+</CodeGroup>
+
+### Build on what exists
+
+<CodeGroup>
+```text Good
+Add a chart showing Tasks grouped by status
+```
+
+```text Creates confusion
+Add a chart showing items by category
+(What items? What category?)
+```
+</CodeGroup>
+
+---
+
+## Asking questions vs requesting builds
+
+Gainable can answer questions about your project without making changes.
+
+### To ask a question
+
+```text
+How does the task filtering work?
+What fields does the Deal model have?
+Where is the dashboard code?
+```
+
+### To request a change
+
+```text
+Add a due date field to tasks
+Change the dashboard to show monthly data
+Fix the filter to include all statuses
+```
+
+<Tip>
+Start questions with "how", "what", "where", or "explain" to get information without triggering a build.
+</Tip>
+
+---
+
+## Recovery from mistakes
+
+If something wasn't built correctly:
+
+### Be specific about what's wrong
+
+<CodeGroup>
+```text Clear
+The deal amount is showing without the dollar sign.
+Format it as currency.
+```
+
+```text Vague
+The amounts look wrong
+```
+</CodeGroup>
+
+### Describe what you expected
+
+<CodeGroup>
+```text Clear
+The chart should show deals grouped by status, but
+it's showing them grouped by company. Change it to
+group by status.
+```
+
+```text Vague
+The chart is wrong
+```
+</CodeGroup>
+
+---
+
+## Quick reference
+
+| Situation | Best Practice |
+|-----------|--------------|
+| Defining data | List all fields with types |
+| Connecting data | Explicitly state relationships |
+| Adding charts | Name the chart type and what data it shows |
+| Adding features | Use feature names (kanban, chat, filter) |
+| Styling | Reference theme names or specific colors |
+| Updating | Reference existing elements by name |
+| Fixing issues | Describe what's wrong and what you expected |
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Examples" icon="lightbulb" href="/prompting/examples">
+    See real prompts in action
+  </Card>
+  <Card title="Common patterns" icon="copy" href="/prompting/common-patterns">
+    Templates for common app types
+  </Card>
+</CardGroup>

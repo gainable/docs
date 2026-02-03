@@ -1,0 +1,211 @@
+---
+title: "Troubleshooting"
+description: "Common issues and how to resolve them"
+---
+
+## Common issues
+
+### Build didn't create what I expected
+
+**Problem:** The app looks different from what you described.
+
+**Solutions:**
+1. **Be more specific** - Add detail to your prompt
+2. **Break it down** - Build in smaller steps
+3. **Clarify fields** - List exact field names and types
+
+<Accordion title="Example: Before and after">
+**Before (vague):**
+```text
+Make a CRM
+```
+
+**After (specific):**
+```text
+Build a CRM with:
+- Companies (name, industry, size)
+- Contacts (name, email, phone, linked to company)
+- Deals (name, amount, status, linked to company)
+- Dashboard with deal totals
+```
+</Accordion>
+
+### Data isn't saving
+
+**Problem:** You fill out a form but the data disappears.
+
+**Solutions:**
+1. **Check required fields** - Make sure all required fields are filled
+2. **Describe the issue** - Tell Gainable: "The deal form isn't saving. The data disappears after I click save."
+3. **Reload and retry** - Refresh the page and try again
+
+### Changes not appearing for other users
+
+**Problem:** Real-time updates aren't working.
+
+**Solutions:**
+1. **Check internet connection** - Ensure you're online
+2. **Refresh the page** - Sometimes connections need to reconnect
+3. **Same view?** - Make sure other users are viewing the same page
+
+### Chart showing wrong data
+
+**Problem:** The chart doesn't match your expectations.
+
+**Solutions:**
+1. **Specify the grouping** - "Group by status" vs "group by month"
+2. **Name the date field** - "Use close date for the timeline"
+3. **Request a change** - "The chart should show deals by status, not by company"
+
+<Accordion title="Example: Fixing a chart">
+```text
+The deals by status pie chart is showing the wrong data.
+It should group deals by their status field (new, won, lost)
+and show the count in each status.
+```
+</Accordion>
+
+### Kanban cards not dragging
+
+**Problem:** Cards won't move between columns.
+
+**Solutions:**
+1. **Refresh the page** - Reload to reinitialize
+2. **Check console** - Open browser dev tools for error messages
+3. **Report the issue** - "Cards on the kanban board aren't dragging"
+
+### Filter not working
+
+**Problem:** Filter selections don't change the displayed data.
+
+**Solutions:**
+1. **Clear and reselect** - Reset the filter and try again
+2. **Check the field** - Make sure items have values in the filtered field
+3. **Describe the issue** - "The status filter on the deals page isn't filtering"
+
+## Requesting fixes
+
+When something isn't working right, help Gainable understand by being specific:
+
+### Be specific about what's wrong
+
+<CodeGroup>
+```text Good
+"The deal amount is showing without a dollar sign.
+It should display as currency like $50,000"
+```
+
+```text Vague
+"The amounts look wrong"
+```
+</CodeGroup>
+
+### Describe what you expected
+
+<CodeGroup>
+```text Good
+"The chart should show deals grouped by status (won, lost, pending),
+but it's grouping by company instead."
+```
+
+```text Vague
+"The chart is broken"
+```
+</CodeGroup>
+
+### Provide context
+
+<CodeGroup>
+```text Good
+"On the deals page, when I click Add Deal and submit the form,
+the deal doesn't appear in the list. I have to refresh the page
+to see it."
+```
+
+```text Vague
+"Adding doesn't work"
+```
+</CodeGroup>
+
+## Getting help
+
+### Describe the issue clearly
+
+Include:
+- **What you were trying to do**
+- **What happened instead**
+- **Any error messages you saw**
+- **Steps to reproduce**
+
+### Example help request
+
+```text
+Issue: New tasks aren't showing on the kanban board
+
+Steps:
+1. Click "Add Task" button
+2. Fill out the form (title: "Test task", status: "To Do")
+3. Click Save
+4. Form closes but task doesn't appear in "To Do" column
+5. After refreshing the page, the task appears
+
+Expected: Task should appear immediately after saving
+```
+
+## Browser issues
+
+### Clear cache and cookies
+
+Sometimes browser data causes issues:
+
+1. Open browser settings
+2. Find "Clear browsing data"
+3. Select "Cookies" and "Cached images/files"
+4. Clear for the Gainable site
+
+### Try a different browser
+
+If issues persist, try:
+- Chrome
+- Firefox
+- Safari
+- Edge
+
+### Disable extensions
+
+Browser extensions can interfere. Try:
+1. Disable ad blockers temporarily
+2. Disable other extensions
+3. Try incognito/private mode
+
+## Performance issues
+
+### Slow loading
+
+If your app feels slow:
+
+1. **Check your data volume** - Very large datasets may load slowly
+2. **Add pagination** - "Paginate the deals list with 25 items per page"
+3. **Add filters** - Filter to show fewer items at once
+
+### Charts loading slowly
+
+For charts with lots of data:
+
+1. **Limit the data** - "Show last 12 months only"
+2. **Aggregate** - "Group by month instead of by day"
+3. **Simplify** - Reduce the number of charts on one page
+
+## Still stuck?
+
+If you've tried the above and still have issues:
+
+1. **Describe the problem in detail** in the chat
+2. **Include any error messages** you see
+3. **Share what you've already tried**
+
+Gainable will help diagnose and fix the issue.
+
+<Card title="Contact Support" icon="envelope" href="mailto:support@gainable.ai">
+  Reach out to our support team for additional help
+</Card>

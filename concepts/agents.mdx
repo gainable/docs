@@ -1,0 +1,172 @@
+---
+title: "Agents"
+description: "Meet the AI agents that build your applications"
+---
+
+## The agent system
+
+Gainable uses multiple specialized AI agents, each with a specific role in building your application. Think of them as a team of experts working together.
+
+## Planner Agent
+
+The Planner is the first agent to see your request. It analyzes what you want and creates a structured plan.
+
+<Card title="What the Planner does" icon="clipboard-list">
+- Understands your intent (create, update, or seed data)
+- Identifies what data models you need
+- Determines which views and features to build
+- Recognizes when to use built-in skills (charts, kanban, chat)
+- Creates a checklist of what will be delivered
+</Card>
+
+### Example: Planner in action
+
+When you say: *"Build a project tracker with tasks and due dates"*
+
+The Planner creates:
+
+```
+Intent: Create new application
+
+Summary: Build project tracker with task management
+
+Data models needed:
+- Project (name, description, status)
+- Task (title, due date, priority, linked to project)
+
+Views:
+- Project list with task counts
+- Task management within each project
+
+Features:
+- Create/edit/delete projects
+- Add tasks with due dates
+- Filter tasks by status
+```
+
+This plan is then handed to the Build Agent.
+
+## Build Agent
+
+The Build Agent is the workhorse that generates all your application code.
+
+<Card title="What the Build Agent does" icon="hammer">
+- Creates database models to store your data
+- Builds API routes for data operations
+- Generates user interface pages
+- Implements forms, tables, and interactive elements
+- Follows proven patterns for reliability
+</Card>
+
+### Skills and expertise
+
+The Build Agent has deep knowledge of:
+
+- **Data visualization** - Charts, graphs, KPIs
+- **Drag-and-drop** - Kanban boards, sortable lists
+- **Real-time updates** - Live data synchronization
+- **UI patterns** - Forms, modals, drawers, navigation
+- **Collaboration** - Chat, files, comments integration
+
+<Tip>
+When you request a specific feature like "add a chart" or "add a kanban board", the Build Agent uses specialized knowledge to implement it correctly.
+</Tip>
+
+## Validation Agent
+
+Before your app is delivered, the Validation Agent checks for common issues.
+
+<Card title="What Validation catches" icon="shield-check">
+- Forms that don't save data correctly
+- Missing connections between data and views
+- UI patterns that could break on mobile
+- Common coding mistakes
+</Card>
+
+This happens automatically - you don't need to do anything. It's like having a quality assurance team review the code before you see it.
+
+## Conversation Agent
+
+When you ask questions about your project (instead of requesting changes), the Conversation Agent helps.
+
+<Card title="What the Conversation Agent does" icon="comments">
+- Answers questions about what was built
+- Explains how features work
+- Helps troubleshoot issues
+- Provides guidance on next steps
+</Card>
+
+### Example: Asking questions
+
+<CodeGroup>
+```text Your question
+"How does the task filtering work?"
+```
+
+```text Conversation Agent response
+"Tasks can be filtered by status using the dropdown menu
+at the top of the task list. The filter is applied
+client-side, so it updates instantly as you select
+different options. The available statuses are:
+pending, in progress, and completed."
+```
+</CodeGroup>
+
+## How agents communicate
+
+The agents work in sequence, each building on the previous work:
+
+<Steps>
+  <Step title="Your prompt arrives">
+    You describe what you want to build or change
+  </Step>
+  <Step title="Intent classification">
+    The system determines: build, question, or seed data
+  </Step>
+  <Step title="Planner creates the plan">
+    For build requests, the Planner analyzes and structures the work
+  </Step>
+  <Step title="Build Agent executes">
+    Code is generated following the plan
+  </Step>
+  <Step title="Validation reviews">
+    Generated code is checked for issues
+  </Step>
+  <Step title="Delivery">
+    Your working app appears in the preview
+  </Step>
+</Steps>
+
+## Context preservation
+
+All agents share context about your project:
+
+- **What's already built** - Existing models, views, and features
+- **Your preferences** - Design choices, naming conventions
+- **Project history** - Previous changes and iterations
+
+This means you can say things like "add a filter to the deals page" and the agents understand exactly which page you mean.
+
+<Note>
+Context is preserved throughout your session. Each new request builds on everything that came before.
+</Note>
+
+## Best practices
+
+To get the most from the agent system:
+
+1. **Be specific** - The more detail you provide, the better the results
+2. **One thing at a time** - Let each build complete before requesting the next
+3. **Use natural language** - Write like you're explaining to a colleague
+4. **Request by feature name** - "Add a pie chart" is clearer than "visualize this somehow"
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Skills" icon="wand-magic-sparkles" href="/concepts/skills">
+    Explore built-in features you can request
+  </Card>
+  <Card title="Prompting guide" icon="message" href="/prompting/overview">
+    Write better prompts for better results
+  </Card>
+</CardGroup>

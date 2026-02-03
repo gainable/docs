@@ -1,0 +1,254 @@
+---
+title: "Kanban Boards"
+description: "Add drag-and-drop workflow boards to your apps"
+---
+
+## Overview
+
+Kanban boards let you visualize work as cards in columns. Drag cards between columns to update their status. Gainable makes it easy to add kanban boards to any app.
+
+## Requesting a kanban board
+
+Simply describe what you want:
+
+```text
+"Add a kanban board for tasks with columns: To Do, In Progress, Done"
+"Show deals as a pipeline board"
+"Create a task board where I can drag cards between columns"
+```
+
+## What you get
+
+When you request a kanban board, Gainable creates:
+
+- **Columns** based on your status options
+- **Cards** for each item showing key information
+- **Drag-and-drop** to move cards between columns
+- **Real-time sync** so all users see changes
+- **Column counts** showing how many items are in each column
+
+## Defining columns
+
+Columns typically correspond to status values. Be explicit:
+
+<CodeGroup>
+```text Good
+"Kanban board with columns:
+- Backlog
+- In Progress
+- Review
+- Done"
+```
+
+```text Vague
+"Add a kanban board"
+```
+</CodeGroup>
+
+## Card content
+
+Specify what information appears on each card:
+
+```text
+"Cards show:
+- Task title
+- Assignee name
+- Due date
+- Priority badge"
+```
+
+Default card content usually includes:
+- Primary field (name/title)
+- Status or category badge
+- Key details (date, assignee, etc.)
+
+## Common patterns
+
+### Task board
+
+```text
+Build a task tracker with:
+- Tasks: title, description, assignee, due date
+- Status: to do, in progress, review, done
+
+Add a kanban board where:
+- Each column is a status
+- Cards show title, assignee, and due date
+- Dragging updates the task status
+```
+
+### Deal pipeline
+
+```text
+Build a CRM with:
+- Deals: name, company, amount, stage
+- Stages: lead, qualified, proposal, negotiation, closed
+
+Show deals as a pipeline board where:
+- Each column is a stage
+- Cards show deal name, company, and amount
+- Dragging moves the deal to that stage
+```
+
+### Hiring tracker
+
+```text
+Track candidates with:
+- Name, position, source
+- Status: applied, phone screen, interview, offer, hired
+
+Kanban board with:
+- Columns for each status
+- Cards showing name and position
+- Drag to advance candidates through the pipeline
+```
+
+## Customization
+
+### Column colors
+
+```text
+"Color the columns:
+- To Do: purple
+- In Progress: blue
+- Done: green"
+```
+
+### Column actions
+
+```text
+"Add a + button in each column header to create a new item in that status"
+```
+
+### Card actions
+
+```text
+"Click a card to open an edit modal"
+"Add a delete button to cards"
+```
+
+### Sublabels
+
+```text
+"Show the total deal value in each column header"
+"Display task count below each column name"
+```
+
+## Sorting within columns
+
+By default, cards maintain their order. You can request ordering:
+
+```text
+"Sort cards by due date within each column"
+"Order cards by priority (high first)"
+"Let users drag to reorder cards within a column"
+```
+
+## Real-time updates
+
+Kanban boards update in real-time:
+
+- **Card moves** appear instantly for all users
+- **New cards** show up when created
+- **Edited cards** refresh with new content
+- **Deleted cards** disappear
+
+<Note>
+When you drag a card, the change is saved immediately and all connected users see the move in real-time.
+</Note>
+
+## Filtering
+
+Add filters to focus on specific cards:
+
+```text
+"Filter the board by assignee"
+"Add a priority filter"
+"Search cards by title"
+```
+
+## Multiple boards
+
+You can have multiple kanban views:
+
+```text
+"One board for my tasks (filtered to my assignments)"
+"Team board showing all tasks"
+"Archive board for completed items"
+```
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Limit columns to 4-7">
+    Too many columns make the board hard to use. Combine similar statuses if needed.
+  </Accordion>
+
+  <Accordion title="Keep card content concise">
+    Show only essential info on cards. Details can go in a detail view on click.
+  </Accordion>
+
+  <Accordion title="Use meaningful column names">
+    "In Progress" is clearer than "Stage 2"
+  </Accordion>
+
+  <Accordion title="Consider column colors">
+    Colors help users quickly identify stages. Green for done, yellow for in progress, etc.
+  </Accordion>
+</AccordionGroup>
+
+## Combining with other features
+
+### Charts
+
+```text
+"Above the kanban board, show a bar chart of task counts by status"
+```
+
+### List view toggle
+
+```text
+"Let users switch between kanban view and list view"
+```
+
+### Filters
+
+```text
+"Add assignee and priority filters above the board"
+```
+
+## Example: Complete task board
+
+```text
+Build a task management app:
+
+Tasks have:
+- Title, description
+- Status: backlog, to do, in progress, review, done
+- Priority: low, medium, high
+- Assignee (user)
+- Due date
+
+Show a kanban board where:
+- Columns: Backlog, To Do, In Progress, Review, Done
+- Column colors: gray, purple, blue, orange, green
+- Cards show: title, priority badge, assignee avatar, due date
+- Drag to move between columns
+- Click card to edit details
+- + button in each column header to add new task
+
+Filters above the board:
+- Filter by assignee
+- Filter by priority
+```
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Real-time updates" icon="bolt" href="/building/real-time">
+    How sync works
+  </Card>
+  <Card title="Views" icon="window" href="/building/views">
+    Other view types
+  </Card>
+</CardGroup>

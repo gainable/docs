@@ -1,0 +1,236 @@
+---
+title: "Views"
+description: "How Gainable creates user interfaces for your apps"
+---
+
+## Understanding views
+
+Views are the pages and screens in your application. When you describe what you want to see, Gainable creates views that display your data and allow interaction.
+
+## Types of views
+
+### List views
+
+Display multiple items in a table or card layout.
+
+```text
+"Show all deals in a list"
+"Display tasks as cards"
+"Create a table of contacts"
+```
+
+Features typically included:
+- Column headers or card titles
+- Sorting options
+- Pagination for large lists
+- Click to view/edit details
+
+### Detail views
+
+Show all information for a single item.
+
+```text
+"When I click a deal, show all its details"
+"Project detail page with tasks"
+```
+
+Features typically included:
+- All fields displayed
+- Edit functionality
+- Related items (if applicable)
+- Delete option
+
+### Dashboard views
+
+Overview of data with summaries and charts.
+
+```text
+"Dashboard showing deal totals and charts"
+"Overview page with KPIs"
+```
+
+Features typically included:
+- KPI cards with totals
+- Charts and graphs
+- Recent activity
+- Quick actions
+
+### Kanban views
+
+Cards organized in columns for workflow management.
+
+```text
+"Kanban board for tasks by status"
+"Pipeline view for deals"
+```
+
+Features typically included:
+- Drag-and-drop between columns
+- Card summaries
+- Column totals
+- Quick edit
+
+## UI components
+
+Gainable uses a variety of components to build your interfaces:
+
+### Cards
+
+Compact display of item information.
+
+```text
+"Show deals as cards with name, amount, and status"
+```
+
+### Tables
+
+Structured rows and columns for data.
+
+```text
+"Display contacts in a table with sortable columns"
+```
+
+### Forms
+
+Input fields for creating and editing data.
+
+```text
+"Add deal form with all fields"
+"Edit contact modal"
+```
+
+### Modals and drawers
+
+Overlay panels for focused interactions.
+
+```text
+"Open edit form in a modal"
+"Show details in a slide-out drawer"
+```
+
+### Filters
+
+Narrow down displayed data.
+
+```text
+"Filter deals by status"
+"Search contacts by name"
+"Date range filter for orders"
+```
+
+### Charts
+
+Visual data representation.
+
+```text
+"Pie chart of deals by status"
+"Line chart showing monthly revenue"
+```
+
+## Responsive design
+
+All Gainable views are automatically responsive:
+
+- **Desktop**: Full layout with sidebars and multi-column grids
+- **Tablet**: Adapted layout with collapsible elements
+- **Mobile**: Single-column layout with touch-friendly controls
+
+You don't need to specify this - it's built in.
+
+## Navigation
+
+Gainable creates navigation between views automatically:
+
+- **Header navigation** for main pages
+- **Breadcrumbs** for hierarchical navigation
+- **Links** between related items
+- **Back buttons** for returning to lists
+
+### Requesting specific navigation
+
+```text
+"Add a sidebar with links to Dashboard, Deals, and Contacts"
+"Put navigation tabs at the top"
+```
+
+## Customizing views
+
+### Layout requests
+
+```text
+"Put the chart on the left and the list on the right"
+"Stack the KPI cards horizontally"
+"Use a two-column layout for the form"
+```
+
+### Placement requests
+
+```text
+"Add the filter above the table"
+"Put the add button in the top right"
+"Show the total at the bottom of the list"
+```
+
+### Display requests
+
+```text
+"Show the status as a colored badge"
+"Display amounts in green for positive, red for negative"
+"Use avatars for user assignments"
+```
+
+## View-specific tips
+
+### For dashboards
+
+<Accordion title="Dashboard tips">
+- Request specific KPIs: "Show total revenue, deal count, and average deal size"
+- Name your charts: "Pie chart showing deals by status"
+- Include recent activity: "List of last 10 deals created"
+- Add quick actions: "Button to create new deal"
+</Accordion>
+
+### For lists
+
+<Accordion title="List tips">
+- Specify columns: "Show name, email, company, and status"
+- Request sorting: "Sort by created date, newest first"
+- Add filters: "Filter by status and date range"
+- Enable search: "Search by name or email"
+</Accordion>
+
+### For kanban boards
+
+<Accordion title="Kanban tips">
+- Define columns: "Columns: Backlog, In Progress, Review, Done"
+- Specify card content: "Cards show title, assignee, and due date"
+- Request column totals: "Show count in each column header"
+- Enable drag-and-drop: "Drag tasks between columns"
+</Accordion>
+
+## Themes and styling
+
+Gainable apps use themes for consistent styling:
+
+```text
+"Use the corporate theme"
+"Apply a dark color scheme"
+"Use the cupcake theme for a playful look"
+```
+
+Available themes include: light, dark, cupcake, corporate, retro, cyberpunk, and more.
+
+<Card title="Design customization" icon="palette" href="/skills/design">
+  Learn more about themes and styling
+</Card>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Real-time updates" icon="bolt" href="/building/real-time">
+    Live data synchronization
+  </Card>
+  <Card title="Collaboration" icon="users" href="/building/collaboration">
+    Chat, files, and comments
+  </Card>
+</CardGroup>

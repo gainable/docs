@@ -1,0 +1,146 @@
+---
+title: "Real-time Updates"
+description: "How Gainable keeps data synchronized across all users"
+---
+
+## What are real-time updates?
+
+Real-time updates mean changes appear instantly for all users without refreshing the page. When someone adds a deal, updates a task, or deletes a contact, everyone sees the change immediately.
+
+## How it works
+
+Gainable apps use WebSocket connections to push updates:
+
+1. **User A** creates a new task
+2. **Server** saves the task to the database
+3. **Server** broadcasts "new task created" to all connected users
+4. **User B's screen** updates automatically to show the new task
+
+<Note>
+This happens in milliseconds - changes feel instantaneous.
+</Note>
+
+## What updates in real-time?
+
+By default, these actions trigger real-time updates:
+
+| Action | What happens |
+|--------|--------------|
+| **Create** | New item appears in lists and counts update |
+| **Update** | Changed item refreshes with new values |
+| **Delete** | Item disappears from all views |
+
+This applies to:
+- List views and tables
+- Dashboard KPIs and charts
+- Kanban board cards
+- Detail views
+
+## Requesting real-time features
+
+Real-time is built into Gainable apps by default. To emphasize it:
+
+```text
+"Make sure the task list updates in real-time"
+"Show live updates when deals change"
+"Sync changes across all users instantly"
+```
+
+## Use cases
+
+### Collaborative dashboards
+
+Multiple team members viewing the same dashboard see updates as data changes:
+
+- New deals added to pipeline
+- Status changes on tasks
+- KPI totals recalculating
+
+### Kanban boards
+
+When someone drags a card to a new column:
+
+- All users see the card move
+- Column counts update
+- No page refresh needed
+
+### Activity feeds
+
+Real-time is especially useful for:
+
+- Team activity logs
+- Comment threads
+- Notification counts
+
+## What doesn't update in real-time
+
+Some things require a page refresh:
+
+- **Navigation changes** - New pages or routes added
+- **Layout changes** - Structural modifications to the UI
+- **Filter states** - Your current filter selections stay the same
+
+## Performance considerations
+
+Real-time updates are optimized for typical use:
+
+- **Efficient updates** - Only changed data is sent
+- **Smart rendering** - Only affected components re-render
+- **Connection management** - Automatic reconnection if disconnected
+
+<Tip>
+Real-time works best for apps with moderate data volumes. For very large datasets (thousands of items), consider using filters to limit the displayed data.
+</Tip>
+
+## Combining with other features
+
+Real-time updates work seamlessly with:
+
+### Charts
+
+```text
+"Dashboard charts that update when new data is added"
+```
+
+Charts recalculate and animate when underlying data changes.
+
+### Kanban boards
+
+```text
+"Kanban board where all users see cards move in real-time"
+```
+
+Drag-and-drop actions sync across all connected users.
+
+### Collaboration
+
+```text
+"Team chat with real-time messages"
+```
+
+Messages appear instantly for all participants.
+
+## Troubleshooting
+
+### Changes not appearing?
+
+- Check your internet connection
+- Try refreshing the page once
+- Ensure you're looking at the same data (filters, etc.)
+
+### Updates seem delayed?
+
+- High network latency can cause slight delays
+- Large data changes may take a moment to process
+- Complex views may have brief rendering delays
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Views" icon="window" href="/building/views">
+    Understanding your app's interface
+  </Card>
+  <Card title="Collaboration" icon="users" href="/building/collaboration">
+    Team chat and file sharing
+  </Card>
+</CardGroup>
