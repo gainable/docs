@@ -69,13 +69,13 @@
       "anchors": [
         {
           "anchor": "Get Started",
-          "href": "https://app.gainable.ai",
+          "href": "https://build.gainable.dev",
           "icon": "rocket"
         },
         {
           "anchor": "Community",
-          "href": "https://discord.gg/gainable",
-          "icon": "discord"
+          "href": "https://community.gainable.dev",
+          "icon": "users"
         }
       ]
     }
@@ -94,7 +94,7 @@
     "primary": {
       "type": "button",
       "label": "Start Building",
-      "href": "https://app.gainable.ai"
+      "href": "https://build.gainable.dev"
     }
   },
   "footer": {

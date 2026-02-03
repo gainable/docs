@@ -1,6 +1,6 @@
 # Gainable Documentation
 
-This repository contains the documentation for [Gainable](https://app.gainable.ai), the AI-powered no-code app builder.
+This repository contains the documentation for [Gainable](https://build.gainable.dev), the AI-powered no-code app builder.
 
 ## Documentation Structure
 
@@ -64,4 +64,4 @@ Documentation is automatically deployed when changes are pushed to the main bran
 ## Resources
 
 - [Mintlify Documentation](https://mintlify.com/docs)
-- [Gainable App](https://app.gainable.ai)
+- [Gainable App](https://build.gainable.dev)
