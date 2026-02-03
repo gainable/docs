@@ -10,40 +10,46 @@ Let's build a simple deal tracker to see Gainable in action. This will take abou
 ### Step 1: Start a new project
 
 1. Go to [build.gainable.dev](https://build.gainable.dev)
-2. Click **New Project**
-3. Give your project a name (e.g., "My Deal Tracker")
 
 ### Step 2: Describe what you want
 
-In the chat interface, type your first prompt:
+In the input bpx, type your first prompt:
 
 <CodeGroup>
+
 ```text Good prompt
-Build a deal tracker with:
-- Deal name, company, and amount
-- Status (new, in progress, won, lost)
-- A dashboard showing total deal value and a chart of deals by status
+Setup a dashboard with three KPIs: Total deals, won deals, and lost deals. 
+
+Create a table listing deals with customer, amount, assigned to, 
+and close date for each deal; include a "Add new" deal button. 
+
+Lastly, add a line chart showing deals for each status over the last 
+12 months by deal close date. 
+
+Have it all vertically stacked; with KPIs 1st, chart 2nd, and table last.
 ```
+
 
 ```text What this creates
 - A Deal data model with all your fields
 - A deals page with a table to manage deals
 - Add, edit, and delete functionality
-- A dashboard with KPI cards and a pie chart
+- A dashboard with KPI cards and a line chart
 ```
+
 </CodeGroup>
 
 <Tip>
-Being specific about your fields (like "deal name, company, and amount") helps Gainable create exactly what you need.
+  Being specific about your fields (like "deal name, company, and amount") helps Gainable create exactly what you need.
 </Tip>
 
 ### Step 3: Watch it build
 
-Gainable will show you a plan of what it's going to build, then generate your entire application. You'll see:
+Gainable will show you a plan of what it's going to build, and if you choose to accept it will generate your entire application. You'll see:
 
-1. **Plan preview** - What features will be created
-2. **Live progress** - Watch files being generated
-3. **Your app** - A working application appears in the preview
+1. **Plan preview** - What features will be created; if Gainable finds the requet ambigious it will ask follow up questions
+2. **Build progress** - Watch the build being generated
+3. **Your app** - A working application appears in the preview panel along with a message telling you what's been done
 
 ### Step 4: Use your app
 
@@ -54,7 +60,7 @@ Once the build completes, you can:
 - **Edit or delete** - Click on any deal to modify it
 
 <Note>
-Your app updates in real-time. If you add a deal, the dashboard chart updates automatically.
+  Your app updates in real-time. If you add a deal, the dashboard chart updates automatically.
 </Note>
 
 ## Try adding a feature
