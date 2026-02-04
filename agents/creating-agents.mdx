@@ -1,0 +1,180 @@
+---
+title: "Creating Agents"
+description: "Define your agent's name, instructions, and personality"
+---
+
+## How agent creation works
+
+When you describe the assistant you want, Gainable's **Agent Planner** analyzes your request and the **Agent Builder** creates the agent. The agent stays synced with your app — as you add data models or features, the agent can be updated to work with them.
+
+<Steps>
+  <Step title="Describe your agent">
+    Tell Gainable what kind of assistant you want, what it should know, and how it should behave.
+  </Step>
+  <Step title="Agent Planner analyzes">
+    The Agent Planner determines the agent's name, instructions, functions, and configuration.
+  </Step>
+  <Step title="Agent Builder creates">
+    The Agent Builder sets up the agent with all its properties and connects it to your app.
+  </Step>
+  <Step title="Agent stays synced">
+    As your app changes, you can update the agent through follow-up prompts.
+  </Step>
+</Steps>
+
+## Agent properties
+
+| Property | Description |
+|----------|-------------|
+| **Name** | Display name shown in the copilot header (e.g., "Sales Coach") |
+| **Description** | Short summary of what the agent does, shown to users |
+| **Instructions** | System prompt that defines the agent's behavior, tone, and rules |
+| **Conversation starters** | Pre-defined prompts displayed as buttons to help users begin |
+| **Web search** | Whether the agent can search the web for additional information |
+| **Functions** | Connections to your app's API endpoints for reading and writing data |
+| **Knowledge** | Uploaded documents the agent can reference when answering |
+
+## Writing good prompts for agent creation
+
+Be specific about what the agent should do, who it helps, and what data it needs access to.
+
+<CodeGroup>
+```text Good prompt
+Create an AI agent called "Sales Coach" for our sales team.
+It should:
+- Help reps find deals by status, company, or amount
+- Answer questions about our sales process
+- Use a friendly, encouraging tone
+- Start conversations with: "Show my open deals",
+  "What deals are closing this month?",
+  "Find deals over $10k"
+- Have access to deals and contacts data
+- Be able to search the web for company information
+```
+
+```text Vague prompt
+Add an AI assistant to help with sales stuff.
+```
+</CodeGroup>
+
+## Writing effective instructions
+
+The agent's **instructions** act as its system prompt — they define how the agent behaves in every conversation. Good instructions include:
+
+- **Role definition** — Who the agent is and what it specializes in
+- **Tone and personality** — How it should communicate
+- **Rules and boundaries** — What it should and shouldn't do
+- **Data awareness** — What data it has access to
+
+### Example instructions
+
+```text
+You are Sales Coach, a helpful AI assistant for the sales team.
+
+Your role:
+- Help reps find and analyze their deals
+- Provide pipeline insights and status updates
+- Suggest next steps based on deal stage
+
+Tone:
+- Friendly and encouraging
+- Concise — prefer bullet points over long paragraphs
+- Use data to back up suggestions
+
+Rules:
+- Always confirm before making changes to deals
+- If you don't know something, say so
+- Focus on deals and sales — redirect other questions
+```
+
+## Conversation starters
+
+Conversation starters are pre-defined prompts displayed as clickable buttons when the copilot opens. They help users discover what the agent can do.
+
+### Best practices
+
+- **Keep them short** — 3-8 words per starter
+- **Make them varied** — Cover different capabilities
+- **Be domain-specific** — Match your agent's purpose
+- **Use action language** — Start with verbs
+
+<CodeGroup>
+```text Good starters
+"Show my open deals"
+"Deals closing this month"
+"Find deals over $10k"
+"Pipeline summary"
+```
+
+```text Weak starters
+"Help me"
+"What can you do?"
+"Tell me something"
+"Hi"
+```
+</CodeGroup>
+
+## Web search
+
+Enabling web search lets the agent look up external information during conversations.
+
+**When to enable:**
+- The agent needs current information (news, market data, company details)
+- Users might ask questions beyond your app data and documents
+
+**When to skip:**
+- The agent only works with internal data
+- You want to keep responses focused on your content
+- Sensitive contexts where external information could be misleading
+
+## Managing and updating agents
+
+You can update agents through follow-up prompts at any time:
+
+```text
+Update the Sales Coach agent to also greet users by name
+and add a conversation starter for "Top deals this week"
+```
+
+```text
+Change the support agent's tone to be more formal
+and remove the web search capability
+```
+
+```text
+Add a new conversation starter: "Check order status"
+```
+
+## Tips
+
+<AccordionGroup>
+  <Accordion title="Be specific about the domain">
+    An agent that "helps with everything" is less useful than one focused on a specific area like sales, support, or HR.
+  </Accordion>
+  <Accordion title="Define tone and personality">
+    Agents feel more natural when they have a consistent personality. Specify whether it should be formal, casual, encouraging, or direct.
+  </Accordion>
+  <Accordion title="Mention data access explicitly">
+    Tell the agent what data models it should use: "Give it access to deals and contacts" is much clearer than "let it see the data."
+  </Accordion>
+  <Accordion title="Test with real questions">
+    After creating an agent, try asking it the kinds of questions your users would ask. Refine instructions based on the results.
+  </Accordion>
+</AccordionGroup>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Agent functions" icon="plug" href="/agents/functions">
+    Connect your agent to app data
+  </Card>
+  <Card title="Knowledge bases" icon="book" href="/agents/knowledge">
+    Upload documents for your agent
+  </Card>
+  <Card title="Copilot" icon="message-bot" href="/agents/copilot">
+    Embed the agent in your app
+  </Card>
+  <Card title="Overview" icon="robot" href="/agents/overview">
+    Back to AI Agents & Copilot overview
+  </Card>
+</CardGroup>

@@ -47,6 +47,16 @@
             ]
           },
           {
+            "group": "AI Agents & Copilot",
+            "pages": [
+              "agents/overview",
+              "agents/creating-agents",
+              "agents/functions",
+              "agents/knowledge",
+              "agents/copilot"
+            ]
+          },
+          {
             "group": "Skills Reference",
             "pages": [
               "skills/chartjs",

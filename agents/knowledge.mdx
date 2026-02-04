@@ -1,0 +1,126 @@
+---
+title: "Knowledge Bases"
+description: "Upload documents your agent can reference when answering questions"
+---
+
+## What are knowledge bases?
+
+Knowledge bases let you upload documents that your AI agent can reference during conversations. This is powered by **RAG (Retrieval-Augmented Generation)** — when a user asks a question, the agent searches your uploaded documents for relevant information and uses it to generate accurate answers.
+
+<Info>
+Think of a knowledge base as giving your agent a reference library. Instead of making up answers, the agent can look up the right information from your actual documents.
+</Info>
+
+## How it works
+
+<Steps>
+  <Step title="Create your agent">
+    Set up an agent with a name, instructions, and any functions it needs.
+  </Step>
+  <Step title="Open agent details">
+    In the Gainable interface, open the agent's detail panel.
+  </Step>
+  <Step title="Click the folder icon">
+    The folder icon opens the knowledge base manager for that agent.
+  </Step>
+  <Step title="Upload documents">
+    Drag and drop or select files to upload. The agent can now reference them.
+  </Step>
+</Steps>
+
+## What to upload
+
+<CardGroup cols={2}>
+  <Card title="Playbooks & Guides" icon="book">
+    Sales playbooks, process guides, standard operating procedures
+  </Card>
+  <Card title="Product Documentation" icon="file-lines">
+    Product catalogs, feature descriptions, specifications, pricing sheets
+  </Card>
+  <Card title="Policies & Compliance" icon="scale-balanced">
+    Company policies, compliance documents, terms of service, HR guidelines
+  </Card>
+  <Card title="Training Materials" icon="graduation-cap">
+    Onboarding docs, training manuals, FAQs, troubleshooting guides
+  </Card>
+</CardGroup>
+
+## Use cases
+
+<AccordionGroup>
+  <Accordion title="Sales agent + product catalog">
+    Upload your product catalog and pricing sheet. The agent can answer questions like "What's the price for the Enterprise plan?" or "Compare the Pro and Business tiers" using actual product data.
+  </Accordion>
+  <Accordion title="Support agent + troubleshooting guide">
+    Upload troubleshooting documentation and FAQs. The agent can walk users through solutions: "My printer won't connect" triggers a lookup of your troubleshooting steps for printer connectivity.
+  </Accordion>
+  <Accordion title="HR assistant + company policies">
+    Upload the employee handbook, PTO policies, and benefits guide. Employees can ask "How many vacation days do I get?" and get accurate answers from your actual policy documents.
+  </Accordion>
+  <Accordion title="Onboarding agent + training materials">
+    Upload onboarding guides and training docs. New hires can ask "What's the process for setting up my development environment?" and get step-by-step instructions from your materials.
+  </Accordion>
+</AccordionGroup>
+
+## Managing knowledge bases
+
+<Note>
+Knowledge bases are managed through the UI using the folder icon on the agent detail panel — not through chat prompts. You can add, remove, and replace documents at any time through this interface.
+</Note>
+
+To update a knowledge base:
+1. Open the agent detail panel
+2. Click the folder icon
+3. Add new documents or remove existing ones
+4. Changes take effect immediately
+
+## Combining knowledge with functions
+
+Knowledge bases and [functions](/agents/functions) work together to give your agent maximum capability:
+
+| Source | Best for | Example |
+|--------|----------|---------|
+| **Functions** | Live app data that changes frequently | "How many open deals do I have?" |
+| **Knowledge** | Static reference material and documentation | "What's our refund policy?" |
+| **Both** | Questions that need data context + reference material | "This customer wants a refund — what's the policy and what's their order history?" |
+
+```text
+Create a support agent that can:
+- Look up customer orders (functions)
+- Reference our return policy and FAQ (knowledge base)
+- Search the web for product compatibility info (web search)
+```
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Keep documents focused">
+    Upload specific, relevant documents rather than entire document libraries. A focused knowledge base produces more accurate answers.
+  </Accordion>
+  <Accordion title="Use clear document structure">
+    Documents with headings, sections, and organized content work better for retrieval. Well-structured documents help the agent find the right information faster.
+  </Accordion>
+  <Accordion title="Update documents when information changes">
+    If your policies or product information changes, replace the old documents with updated versions. The agent always uses the latest uploaded content.
+  </Accordion>
+  <Accordion title="Test with real questions">
+    After uploading documents, ask the agent questions your users would ask. Verify that it finds and uses the right information from your documents.
+  </Accordion>
+</AccordionGroup>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Creating agents" icon="robot" href="/agents/creating-agents">
+    Set up your agent's configuration
+  </Card>
+  <Card title="Agent functions" icon="plug" href="/agents/functions">
+    Connect to live app data
+  </Card>
+  <Card title="Copilot" icon="message-bot" href="/agents/copilot">
+    Embed the agent in your app
+  </Card>
+  <Card title="Overview" icon="robot" href="/agents/overview">
+    Back to AI Agents & Copilot overview
+  </Card>
+</CardGroup>

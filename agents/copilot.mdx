@@ -1,0 +1,159 @@
+---
+title: "Copilot"
+description: "Embed an AI chat interface in any page of your app"
+---
+
+## What is the copilot?
+
+The copilot is an AI chat interface you can embed in any page of your Gainable app using the `<wy-copilot>` component. It connects to one of your [AI agents](/agents/creating-agents) and gives users a conversational way to interact with your app's data and knowledge.
+
+<Info>
+Each copilot is linked to a single agent. You can place multiple copilots on different pages, each connected to a different agent — for example, a sales assistant on the deals page and a support helper on the tickets page.
+</Info>
+
+## Adding a copilot
+
+Describe where you want the copilot and which agent it should use:
+
+```text
+Add a copilot to the deals page connected to the Sales Coach agent.
+```
+
+```text
+Put an AI chat panel on the support dashboard
+using the Support Assistant agent.
+```
+
+```text
+Add copilots to each main page:
+- Deals page: Sales Coach agent
+- Support page: Support Assistant agent
+- HR page: HR Helper agent
+```
+
+## What users see
+
+When a copilot is added to a page, users see:
+
+- **Agent name and description** in the chat header
+- **Conversation starters** as clickable buttons to begin a conversation
+- **Message input** for typing questions
+- **Chat responses** with formatted text, lists, and data from functions and knowledge
+
+## Capabilities
+
+The copilot inherits all capabilities from its connected agent:
+
+| Capability | Description |
+|------------|-------------|
+| **Chat** | Natural language conversation |
+| **Function calling** | Query and modify app data through the agent's functions |
+| **Knowledge queries** | Reference uploaded documents from the agent's knowledge base |
+| **Web search** | Search the web if enabled on the agent |
+| **Conversation starters** | Pre-defined prompts shown as buttons |
+
+## Placement patterns
+
+### Specific page placement
+
+Place a copilot on the page where it's most relevant:
+
+```text
+Add the Sales Coach copilot to the deals page.
+```
+
+### Multiple pages, same agent
+
+Use the same agent on several pages:
+
+```text
+Add the Support Assistant copilot to both the
+tickets page and the customer detail page.
+```
+
+### Different agents per page
+
+Match the agent to the page context:
+
+```text
+Add copilots:
+- Deals page → Sales Coach agent
+- Tickets page → Support Assistant agent
+- Dashboard → Analytics Helper agent
+```
+
+## Copilot vs team chat
+
+The copilot and [team chat](/building/collaboration) serve different purposes:
+
+| | Copilot | Team Chat |
+|---|---------|-----------|
+| **Purpose** | AI assistant for users | Human-to-human messaging |
+| **Powered by** | AI agent | Weavy collaboration |
+| **Responds** | AI with data access | Other team members |
+| **Best for** | Questions, lookups, guidance | Discussions, decisions, updates |
+| **Data access** | Queries app data via functions | No direct data access |
+
+<Tip>
+You can have both on the same page. Use team chat for human collaboration and the copilot for AI-assisted data lookups and guidance.
+</Tip>
+
+## Full end-to-end example
+
+Here's a complete prompt that builds an app, creates an agent, and adds a copilot:
+
+```text
+Build a CRM with:
+- Companies (name, industry, size)
+- Contacts (name, email, phone, linked to company)
+- Deals (name, amount, status, linked to company and contact)
+- Dashboard with pipeline value and deals by status chart
+
+Create an AI agent called "Sales Coach" that:
+- Helps reps find deals and contacts
+- Can query all CRM data
+- Uses a friendly, encouraging tone
+- Has conversation starters:
+  "Show my open deals"
+  "Deals closing this month"
+  "Find contacts at a company"
+  "Pipeline summary"
+
+Add the Sales Coach copilot to the deals page.
+```
+
+This single prompt creates the entire app, the AI agent with data access, and embeds the copilot on the deals page.
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Place copilots where users need help">
+    Put the copilot on pages where users are likely to have questions or need to look up data. A deals page copilot is more useful than one on a simple settings page.
+  </Accordion>
+  <Accordion title="Match agent to page context">
+    If you have multiple copilots, use agents that are relevant to each page. A sales agent on the deals page, a support agent on the tickets page.
+  </Accordion>
+  <Accordion title="Use conversation starters to guide discovery">
+    Good conversation starters show users what the copilot can do. Include starters that demonstrate the agent's key capabilities.
+  </Accordion>
+  <Accordion title="Combine with other features">
+    Copilots work alongside team chat, kanban boards, dashboards, and other features. They add AI capability without replacing existing collaboration tools.
+  </Accordion>
+</AccordionGroup>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Creating agents" icon="robot" href="/agents/creating-agents">
+    Set up the agent behind the copilot
+  </Card>
+  <Card title="Agent functions" icon="plug" href="/agents/functions">
+    Give the agent data access
+  </Card>
+  <Card title="Knowledge bases" icon="book" href="/agents/knowledge">
+    Add document references
+  </Card>
+  <Card title="Collaboration" icon="comments" href="/building/collaboration">
+    Team chat and other collaboration features
+  </Card>
+</CardGroup>

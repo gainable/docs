@@ -1,0 +1,92 @@
+---
+title: "AI Agents & Copilot"
+description: "Add intelligent AI assistants that interact with your app data"
+---
+
+## What are AI agents?
+
+AI agents are custom assistants you create inside your Gainable apps. They can answer questions, look up data, perform actions, and guide users — all through a conversational chat interface called the **copilot**.
+
+<Info>
+**Build agents vs custom agents:** Gainable uses [build agents](/concepts/agents) (Planner, Build, Validation, Conversation) to *create* your app. The agents described here are different — they are custom AI assistants that live *inside* your finished app and help your users.
+</Info>
+
+## What can AI agents do?
+
+<CardGroup cols={2}>
+  <Card title="Customer Support" icon="headset">
+    Answer questions using knowledge bases and look up order or account data
+  </Card>
+  <Card title="Data Analysis" icon="magnifying-glass-chart">
+    Query your app data, filter results, and surface insights through conversation
+  </Card>
+  <Card title="Guided Workflows" icon="route">
+    Walk users through processes with conversation starters and step-by-step guidance
+  </Card>
+  <Card title="Knowledge Assistant" icon="book-open">
+    Reference uploaded documents like policies, playbooks, and product catalogs
+  </Card>
+</CardGroup>
+
+## How it works end to end
+
+<Steps>
+  <Step title="Build your app">
+    Create your application with data models, views, and features as you normally would.
+  </Step>
+  <Step title="Create an agent">
+    Describe the assistant you want. The Agent Builder creates it with a name, instructions, and personality.
+  </Step>
+  <Step title="Add functions">
+    Connect the agent to your app's data so it can look up records, filter lists, and perform actions.
+  </Step>
+  <Step title="Add knowledge">
+    Upload documents (PDFs, guides, policies) the agent can reference when answering questions.
+  </Step>
+  <Step title="Embed a copilot">
+    Place the `<wy-copilot>` chat interface on any page so users can interact with the agent.
+  </Step>
+</Steps>
+
+## Agent capabilities
+
+| Capability | Description |
+|------------|-------------|
+| **Chat** | Natural language conversation with your users |
+| **Function calling** | Read and write data through your app's API endpoints |
+| **Knowledge bases** | Reference uploaded documents (RAG) |
+| **Web search** | Search the web for additional context when enabled |
+| **Conversation starters** | Pre-defined prompts that help users get started |
+
+## Prompt examples
+
+You can request agents and copilots in plain English:
+
+```text
+Create an AI agent called "Sales Coach" that helps reps
+find deals, check pipeline status, and get selling tips.
+Give it access to the deals and contacts data.
+Add a copilot to the deals page.
+```
+
+```text
+Add an AI assistant to the support page that can look up
+customer orders and answer questions from our FAQ document.
+```
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Creating agents" icon="robot" href="/agents/creating-agents">
+    Define your agent's name, instructions, and personality
+  </Card>
+  <Card title="Agent functions" icon="plug" href="/agents/functions">
+    Connect agents to your app data
+  </Card>
+  <Card title="Knowledge bases" icon="book" href="/agents/knowledge">
+    Upload documents for your agent to reference
+  </Card>
+  <Card title="Copilot" icon="message-bot" href="/agents/copilot">
+    Embed the chat interface in your app
+  </Card>
+</CardGroup>
