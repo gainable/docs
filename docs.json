@@ -41,6 +41,7 @@
             "group": "Building Apps",
             "pages": [
               "building/data-models",
+              "building/data-connectors",
               "building/views",
               "building/real-time",
               "building/collaboration"

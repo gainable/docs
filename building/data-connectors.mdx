@@ -1,0 +1,138 @@
+---
+title: "Data Connectors"
+description: "Connect external data sources and sync them into your app"
+---
+
+## What are data connectors?
+
+Data connectors let you bring data from external systems into your Gainable app. Instead of manually entering data, you connect a source — like a CRM, spreadsheet, or payment platform — and use a conversational AI agent to define how that data maps into your app's data models.
+
+The **Data Model agent** walks you through the process: discovering available columns, letting you pick which ones to include, renaming fields, setting types, choosing primary keys, and syncing the data into your app.
+
+<Info>
+Data connectors are a build-time tool. You set them up while designing your app, and they sync external data into your data models. This is different from [copilot agents](/agents/copilot), which are runtime assistants that help your app's users.
+</Info>
+
+## Supported data sources
+
+| Source | Category | Auth | Capabilities |
+|--------|----------|------|-------------|
+| **HubSpot** | CRM | OAuth | Read & write contacts, companies, deals |
+| **Folk CRM** | CRM | OAuth | Read & write CRM data |
+| **Google Sheets** | Spreadsheet | OAuth | Read & write rows |
+| **Stripe** | Payments | API key | Read customers, invoices, subscriptions |
+| **Databricks** | Data warehouse | OAuth | Read catalogs, schemas, tables, run SQL |
+| **Attio** | CRM | OAuth | Read & write CRM data |
+
+## How it works
+
+<Steps>
+  <Step title="Connect a data source">
+    Choose a connector and authenticate with OAuth or an API key. Gainable securely stores the connection.
+  </Step>
+  <Step title="Select a data model and link the source">
+    Pick an existing data model (or create a new one) and link the connected source to it.
+  </Step>
+  <Step title="Agent discovers available columns">
+    The Data Model agent reads the external source and shows you the available columns along with sample data.
+  </Step>
+  <Step title="Chat to define your schema">
+    Use natural language to select columns, rename fields, set types, and pick a primary key. The agent handles the mapping.
+  </Step>
+  <Step title="Save schema and sync data">
+    Confirm the schema and sync the data into your app. Records from the external source populate your data model.
+  </Step>
+</Steps>
+
+## Chatting with the Data Model agent
+
+The Data Model agent understands natural language commands for shaping your schema. Here are some examples:
+
+```text
+Include first name, last name, email, and company name
+```
+
+```text
+Rename "company_name" to "company" and "amt" to "amount"
+```
+
+```text
+Set the email field as the primary key
+```
+
+```text
+Change the "amount" field type to currency
+```
+
+```text
+Exclude the internal_id and legacy_status columns
+```
+
+```text
+Show me a preview of the data with these columns
+```
+
+The agent will confirm each change and show you an updated preview so you can verify the schema before syncing.
+
+## Merging multiple sources
+
+You can connect multiple data sources to a single data model. This is useful when the same type of data lives in different systems — for example, contacts in both HubSpot and Folk CRM.
+
+### How merging works
+
+1. **Connect each source** to the same data model
+2. **Define a merge key** — a shared field (like email) used to match records across sources
+3. **Set source priority** — choose which source takes precedence when the same field has different values
+4. **Resolve conflicts** — the higher-priority source wins for overlapping fields; unique fields from each source are always included
+
+<Accordion title="Example: Merging contacts from HubSpot and Google Sheets">
+You have contacts in HubSpot (with deal history) and a Google Sheet (with custom scoring). Both share an email column.
+
+1. Connect HubSpot and Google Sheets to your **Contacts** data model
+2. Set **email** as the merge key
+3. Set HubSpot as the primary source (higher priority)
+4. After sync, each contact has deal data from HubSpot and scoring from Google Sheets — matched by email
+
+If both sources have a "company" field with different values, HubSpot's value is used because it has higher priority.
+</Accordion>
+
+## Managing connections
+
+The data connector interface has three main areas:
+
+- **Connections tab** — View all connected sources, add new connections, or disconnect existing ones
+- **Schema tab** — See and edit the field mappings between external columns and your data model fields
+- **Preview tab** — View sample data with your current schema applied before committing a sync
+
+Use the **Sync** button to pull the latest data from connected sources into your app.
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Always set a primary key">
+    Choose a unique field (like email or ID) as the primary key. This ensures records are correctly identified during syncs and merges, preventing duplicates.
+  </Accordion>
+  <Accordion title="Start with one source">
+    Connect and configure a single data source first. Once you're happy with the schema and the data looks right, add additional sources and configure merging.
+  </Accordion>
+  <Accordion title="Keep schemas focused">
+    Only include the columns your app actually needs. Importing every available field adds noise and makes your data models harder to work with.
+  </Accordion>
+  <Accordion title="Test with preview before syncing">
+    Always check the Preview tab before running a full sync. This lets you catch mapping issues, unexpected nulls, or type mismatches before they reach your app data.
+  </Accordion>
+</AccordionGroup>
+
+## Learn more
+
+<CardGroup cols={2}>
+  <Card title="Data models" icon="database" href="/building/data-models">
+    How Gainable organizes and stores your app data
+  </Card>
+  <Card title="AI agents overview" icon="robot" href="/agents/overview">
+    Add intelligent AI assistants to your apps
+  </Card>
+  <Card title="Agent functions" icon="plug" href="/agents/functions">
+    Connect agents to your app data through API endpoints
+  </Card>
+</CardGroup>

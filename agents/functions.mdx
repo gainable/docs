@@ -28,6 +28,10 @@ Functions are how agents interact with your app's live data. Without functions, 
   </Step>
 </Steps>
 
+<Tip>
+Functions can query data synced from external sources via [data connectors](/building/data-connectors). Connect a source like HubSpot or Google Sheets, sync the data into a data model, and your agent's functions can access it just like any other app data.
+</Tip>
+
 ## Automatic endpoint discovery
 
 When you ask the Agent Builder to give an agent access to your data, it automatically discovers your app's available API endpoints. You don't need to manually configure routes or write API code — the builder reads your app's data models and creates the appropriate function mappings.
@@ -125,5 +129,8 @@ it should only see deals and contacts.
   </Card>
   <Card title="Data models" icon="database" href="/building/data-models">
     How app data is structured
+  </Card>
+  <Card title="Data connectors" icon="plug" href="/building/data-connectors">
+    Connect external data sources to your app
   </Card>
 </CardGroup>
