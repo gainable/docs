@@ -19,10 +19,6 @@ Best for showing trends over time.
 "Show revenue trend as a line graph"
 ```
 
-<Frame>
-  ![Line chart example](/images/chart-line.png)
-</Frame>
-
 ### Bar charts
 
 Best for comparing categories.
@@ -57,30 +53,37 @@ Similar to pie charts with a hole in the center.
 ### Be specific about the data
 
 <CodeGroup>
+
 ```text Good
 "Add a pie chart showing deals grouped by status (won, lost, pending)"
 ```
 
+
 ```text Vague
 "Add a chart"
 ```
+
 </CodeGroup>
 
 ### Specify the chart type
 
 <CodeGroup>
+
 ```text Good
 "Add a line chart showing monthly revenue"
 ```
 
+
 ```text Ambiguous
 "Show monthly revenue"
 ```
+
 </CodeGroup>
 
 ### Name your metrics
 
 <CodeGroup>
+
 ```text Good
 "Dashboard with:
 - Total deals (count)
@@ -89,9 +92,11 @@ Similar to pie charts with a hole in the center.
 - Revenue by month (line chart)"
 ```
 
+
 ```text Incomplete
 "Dashboard with some charts"
 ```
+
 </CodeGroup>
 
 ## Common patterns
@@ -135,7 +140,7 @@ When charting data over time, specify the date field:
 ```
 
 <Tip>
-If your data has a business date (like close date or order date), specify it. Otherwise, charts will use the creation date.
+  If your data has a business date (like close date or order date), specify it. Otherwise, charts will use the creation date.
 </Tip>
 
 ## Interactive features
@@ -207,15 +212,12 @@ Charts update automatically when data changes:
     - **Category comparison** → Bar chart
     - **Part of whole** → Pie or doughnut
   </Accordion>
-
   <Accordion title="Don't overcrowd">
     Limit pie charts to 5-7 segments. Use bar charts for more categories.
   </Accordion>
-
   <Accordion title="Use meaningful titles">
     "Deals by Status" is clearer than "Chart 1"
   </Accordion>
-
   <Accordion title="Consider the context">
     Place charts where they're relevant - sales charts on sales pages, etc.
   </Accordion>
