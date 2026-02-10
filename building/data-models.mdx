@@ -26,6 +26,29 @@ When you say "track deals with name, amount, and status", Gainable creates a Dea
 | updatedAt | Date | Automatically added |
 </Accordion>
 
+## Collection types
+
+The **Data** tab in your app groups collections into three categories:
+
+| Aspect | App Collections | Data Collections | Core Collections |
+|--------|----------------|------------------|------------------|
+| Source | Created in your app | Synced from external sources | Built-in system models |
+| Editable | Yes | Read-only (managed via data connectors) | Read-only |
+| Examples | companies, deals, tasks | HubSpot contacts, Google Sheets rows | users, agents, connections |
+| Chat enabled | Yes | No | No |
+
+### App Collections
+
+Custom collections created when you describe data models. Fully editable and specific to your app — these are what you build.
+
+### Data Collections
+
+External data synced via [data connectors](/building/data-connectors) (HubSpot, Sheets, Stripe, etc.). They appear automatically when you attach a data model. Read-only from the app — managed through the data connectors interface.
+
+### Core Collections
+
+Built-in system collections present in every app: users, agents, email templates, email logs, user field metadata, and connections. Read-only, managed by the platform.
+
 ## Field types
 
 When describing your data, you can specify field types to get exactly what you need:
