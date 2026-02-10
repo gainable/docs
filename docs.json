@@ -92,8 +92,8 @@
     }
   },
   "logo": {
-    "light": "/images/gainable-logo.svg",
-    "dark": "/images/gainable-logo-light.svg"
+    "light": "/images/gainable-logo-v2.svg",
+    "dark": "/images/gainable-logo-v2-light.svg"
   },
   "navbar": {
     "links": [
