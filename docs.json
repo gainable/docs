@@ -67,6 +67,16 @@
             ]
           },
           {
+            "group": "Compare",
+            "pages": [
+              "compare/retool",
+              "compare/appsmith",
+              "compare/lovable",
+              "compare/replit",
+              "compare/structify"
+            ]
+          },
+          {
             "group": "Reference",
             "pages": [
               "reference/api",

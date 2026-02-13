@@ -1,0 +1,133 @@
+---
+title: "Gainable vs Retool"
+description: "Compare Gainable and Retool for building internal tools. See how natural-language app generation compares to drag-and-drop development."
+---
+
+## Quick verdict
+
+Retool is a powerful platform built for developers who want to assemble internal tools from pre-built components, SQL queries, and JavaScript. Gainable removes the developer requirement entirely — you describe what you need in plain English and get a working app with zero code, zero debugging, and zero query writing.
+
+If your team has developers who enjoy wiring up components and writing SQL, Retool is a capable choice. If you want anyone on the team to build production-ready tools without touching code, Gainable is built for that.
+
+<Tip>
+**Bottom line:** Retool is drag-and-drop for developers. Gainable is natural language for everyone.
+</Tip>
+
+## Side-by-side comparison
+
+| Feature | Gainable | Retool |
+|---------|----------|--------|
+| **Build method** | Natural language — describe what you want | Drag-and-drop canvas + JavaScript + SQL |
+| **Technical skill required** | None | Developer-level (SQL, JavaScript, APIs) |
+| **Debugging** | Validation Agent catches issues before delivery | Manual — broken queries, misconfigured components |
+| **Data connections** | Intelligent agent normalizes multi-source data automatically | Manual query writing per data source |
+| **Database** | Flexible MongoDB (schema changes without migrations) | SQL-based (requires migrations for schema changes) |
+| **Collaboration** | Built-in chat, comments, file sharing, AI copilot | Limited — no native team collaboration in apps |
+| **RAG agents** | Full RAG agents connected to live data with composable copilot UI | Retool AI (separate add-on, no real-time data RAG) |
+| **Pricing model** | Per builder — unlimited end users | Per end-user — costs scale with adoption |
+| **Hosting** | Fully managed, zero DevOps | Cloud or self-hosted (self-hosted requires maintenance) |
+| **Iteration speed** | Describe changes in plain English | Reconfigure components, rewrite queries |
+
+## Where Retool shines
+
+<Accordion title="Retool's strengths">
+- **Mature ecosystem** — Years of development with hundreds of integrations, a large component library, and extensive documentation.
+- **SQL query builder** — If your team thinks in SQL, Retool's query editor is excellent for writing and testing complex database queries.
+- **Developer control** — Granular control over every component property, event handler, and data transformation when you need pixel-perfect customization.
+</Accordion>
+
+## Key differences that matter
+
+### Natural language vs drag-and-drop
+
+Retool's canvas gives developers fine-grained control — but that control comes with complexity. You drag widgets, wire up event handlers, write SQL queries, and add JavaScript transformers. Every connection is manual.
+
+Gainable replaces the entire workflow with a single prompt. Describe your app, and the [AI agent system](/concepts/how-it-works) handles data modeling, UI generation, and component wiring automatically.
+
+<CardGroup cols={2}>
+  <Card title="Gainable approach" icon="message">
+    "Build a deal tracker with pipeline stages, revenue forecasting, and team chat on each deal"
+  </Card>
+  <Card title="Retool approach" icon="code">
+    Create table component, write SQL queries, add chart widget, configure event handlers, write JavaScript transformers
+  </Card>
+</CardGroup>
+
+### Zero debugging vs manual troubleshooting
+
+Retool apps break when queries return unexpected data, components are misconfigured, or JavaScript transformers have edge cases. Debugging is on you.
+
+Gainable's [Validation Agent](/concepts/agents) catches issues before your app is delivered. Deterministic boilerplate with Locality of Behavior means generated code is predictable and correct — not something you need to audit and fix.
+
+### Pricing that scales with builders, not users
+
+Retool charges per end-user. Build a tool for your 50-person operations team and you're paying for all 50 seats. Grow to 500 users and your bill grows 10x.
+
+Gainable charges per builder only. Deploy your app to 50 or 5,000 end users — the price stays the same.
+
+<Info>
+Gainable's flat-rate pricing means you never have to think twice about giving more people access to the tools they need.
+</Info>
+
+### RAG agents on your live data
+
+Retool recently added AI features, but they're bolt-on — separate from your data layer and limited in what they can access in real time.
+
+Gainable lets you build full [RAG (Retrieval-Augmented Generation) agents](/agents/overview) that connect directly to your live, unified business data. Ask your copilot "which deals are at risk this quarter?" and it queries your actual pipeline data in real time. The [composable copilot UI](/agents/copilot) — powered by Weavy — embeds directly into your app as a production-tested chat interface, not a bolted-on widget.
+
+<CardGroup cols={2}>
+  <Card title="Gainable copilot" icon="robot">
+    Full RAG agents with real-time data access, embedded in a composable copilot UI alongside your app
+  </Card>
+  <Card title="Retool AI" icon="puzzle-piece">
+    Separate AI add-on with limited data connectivity and no composable UI
+  </Card>
+</CardGroup>
+
+### Flexible data without migrations
+
+Retool sits on SQL. Adding a field means writing a migration, updating queries, and testing that nothing breaks downstream.
+
+Gainable uses MongoDB with an [intelligent data agent](/building/data-connectors) that normalizes data from multiple sources into a clean, consumable model. Schema changes happen naturally — no migrations, no breakage.
+
+## Pricing
+
+Retool's per-user pricing means costs grow with every person who uses your tools. For teams building tools used across the organization, this adds up fast.
+
+Gainable charges a flat rate per builder with unlimited end users and unlimited app builds. No usage meters, no per-seat surprises.
+
+<Info>
+Build for your entire company without worrying about per-seat costs. Only the people creating apps need a Gainable subscription.
+</Info>
+
+## Who should choose Gainable
+
+<CardGroup cols={2}>
+  <Card title="Non-technical teams" icon="users">
+    Operations, sales, and marketing teams who need custom tools but don't have developers to build them.
+  </Card>
+  <Card title="Founders & startups" icon="rocket">
+    Small teams that can't afford to dedicate engineering time to internal tooling.
+  </Card>
+  <Card title="Teams scaling adoption" icon="chart-line">
+    Organizations where dozens or hundreds of people need access to internal tools without per-user costs.
+  </Card>
+  <Card title="Data-heavy teams" icon="database">
+    Teams pulling data from multiple sources (CRMs, spreadsheets, payment systems) who want a unified view.
+  </Card>
+</CardGroup>
+
+## Get started
+
+<CardGroup cols={2}>
+  <Card title="Start building" icon="rocket" href="https://build.gainable.dev">
+    Create your first app in minutes — no code required
+  </Card>
+  <Card title="See how it works" icon="gears" href="/concepts/how-it-works">
+    Learn how Gainable's AI agents build your apps
+  </Card>
+</CardGroup>
+
+---
+
+**Compare Gainable with other platforms:** [vs Appsmith](/compare/appsmith) | [vs Lovable](/compare/lovable) | [vs Replit](/compare/replit) | [vs Structify](/compare/structify)
