@@ -1,14 +1,14 @@
 ---
-title: "Agent Functions"
+title: "Agent functions"
 description: "Connect agents to your app data through API endpoints"
 ---
 
 ## What are functions?
 
-Functions are connections between your AI agent and your app's API endpoints. They let the agent read and write data — looking up records, filtering lists, creating entries, and performing actions on behalf of users.
+Functions are connections between your AI agent and your app's API endpoints. They let the agent read and write data: looking up records, filtering lists, creating entries, and performing actions on behalf of users.
 
 <Info>
-Functions are how agents interact with your app's live data. Without functions, an agent can only chat and reference knowledge base documents. With functions, it can answer questions like "Show me all deals closing this month" by actually querying your data.
+Functions are how agents interact with your app's live data. Without functions, an agent can only chat and reference knowledge base documents. With functions, it can answer questions like "Show me all deals closing this month" by querying your data.
 </Info>
 
 ## How it works
@@ -34,7 +34,7 @@ Functions can query data synced from external sources via [data connectors](/bui
 
 ## Automatic endpoint discovery
 
-When you ask the Agent Builder to give an agent access to your data, it automatically discovers your app's available API endpoints. You don't need to manually configure routes or write API code — the builder reads your app's data models and creates the appropriate function mappings.
+When you ask the Agent Builder to give an agent access to your data, it automatically discovers your app's available API endpoints. You don't need to manually configure routes or write API code. The builder reads your app's data models and creates the appropriate function mappings.
 
 This means the agent learns what data exists, what fields are available, and what operations are possible.
 
@@ -94,8 +94,8 @@ access to the returns data.
 ### Removing functions
 
 ```text
-Remove the Sales Coach's access to employee data —
-it should only see deals and contacts.
+Remove the Sales Coach's access to employee data.
+It should only see deals and contacts.
 ```
 
 ## Best practices

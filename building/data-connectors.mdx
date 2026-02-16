@@ -1,11 +1,11 @@
 ---
-title: "Data Connectors"
+title: "Data connectors"
 description: "Connect external data sources and sync them into your app"
 ---
 
 ## What are data connectors?
 
-Data connectors let you bring data from external systems into your Gainable app. Instead of manually entering data, you connect a source — like a CRM, spreadsheet, or payment platform — and use a conversational AI agent to define how that data maps into your app's data models.
+Data connectors let you bring data from external systems into your Gainable app. Instead of manually entering data, you connect a source (like a CRM, spreadsheet, or payment platform) and use a conversational AI agent to define how that data maps into your app's data models.
 
 The **Data Model agent** walks you through the process: discovering available columns, letting you pick which ones to include, renaming fields, setting types, choosing primary keys, and syncing the data into your app.
 
@@ -28,7 +28,7 @@ The **Data Model agent** walks you through the process: discovering available co
 
 <Steps>
   <Step title="Connect to a data source">
-    Choose a connector and authenticate with OAuth or an API key. Gainable securely stores the connection. You can have several connectors to the same data source with different credentials, for example mulitple HubSpot accounts.
+    Choose a connector and authenticate with OAuth or an API key. Gainable securely stores the connection. You can have several connectors to the same data source with different credentials, for example multiple HubSpot accounts.
   </Step>
   <Step title="Create a data model and connect to source(s)">
     Create a new model and select what sources you want to include in the data model.
@@ -37,7 +37,7 @@ The **Data Model agent** walks you through the process: discovering available co
     Based on your source selections pick what data to include in the data model (for Google Sheets it's Spreadsheet + Sheet, etc.)
   </Step>
   <Step title="Chat to define your schema">
-    Best way to get started is to ask the agent to "Analyze the data structure and suggest a schema". It will then automatically detect multple source and suggest merging, and more. 
+    Best way to get started is to ask the agent to "Analyze the data structure and suggest a schema". It will then automatically detect multiple sources and suggest merging, and more. 
 
     Use natural language to select columns, rename fields, set types, and pick a primary key. The agent handles the mapping.
   </Step>
@@ -78,14 +78,14 @@ The agent will confirm each change and show you an updated preview so you can ve
 
 ## Merging multiple sources
 
-You can connect multiple data sources to a single data model. This is useful when the same type of data lives in different systems — for example, contacts in both HubSpot and Folk CRM.
+You can connect multiple data sources to a single data model. This is useful when the same type of data lives in different systems, for example contacts in both HubSpot and Folk CRM.
 
 ### How merging works
 
 1. **Connect each source** to the same data model
-2. **Define a merge key** — a shared field (like email) used to match records across sources
-3. **Set source priority** — choose which source takes precedence when the same field has different values
-4. **Resolve conflicts** — the higher-priority source wins for overlapping fields; unique fields from each source are always included
+2. **Define a merge key**, a shared field (like email) used to match records across sources
+3. **Set source priority** by choosing which source takes precedence when the same field has different values
+4. **Resolve conflicts**: the higher-priority source wins for overlapping fields; unique fields from each source are always included
 
 <Accordion title="Example: Merging contacts from HubSpot and Google Sheets">
   You have contacts in HubSpot (with deal history) and a Google Sheet (with custom scoring). Both share an email column.
@@ -93,19 +93,19 @@ You can connect multiple data sources to a single data model. This is useful whe
   1. Connect HubSpot and Google Sheets to your **Contacts** data model
   2. Set **email** as the merge key
   3. Set HubSpot as the primary source (higher priority)
-  4. After sync, each contact has deal data from HubSpot and scoring from Google Sheets — matched by email
+  4. After sync, each contact has deal data from HubSpot and scoring from Google Sheets, matched by email
 
   If both sources have a "company" field with different values, HubSpot's value is used because it has higher priority.
 </Accordion>
 
 ## Manage data models
 
-The data model interface has four main areas:
+The data model interface has 4 main areas:
 
-- **Connections tab** — View all connected sources
-- **Schema tab** — See the field mappings between external columns and your data model fields
-- **Preview tab** — View sample data with your current schema applied before committing a sync
-- **Cron tab** — Enable auto sync to keep the data updated from the connected sources
+- **Connections tab**: View all connected sources
+- **Schema tab**: See the field mappings between external columns and your data model fields
+- **Preview tab**: View sample data with your current schema applied before committing a sync
+- **Cron tab**: Enable auto sync to keep the data updated from the connected sources
 
 Use the **Sync** button in the **Preview tab **to pull the latest data from connected sources into your app.
 
@@ -115,10 +115,10 @@ Use the **Sync** button in the **Preview tab **to pull the latest data from conn
   <Accordion title="Always set a primary key">
     Choose a unique field (like email or ID) as the primary key. This ensures records are correctly identified during syncs and merges, preventing duplicates.
 
-    This also allows for upserts data so data created within an app stays connected to the synced data.
+    This also allows for data upserts, so data created within an app stays connected to the synced data.
   </Accordion>
   <Accordion title="Keep schemas focused">
-    Only include the columns your app actually needs. Importing every available field adds noise and makes your data models harder to work with.
+    Only include the columns your app needs. Importing every available field adds noise and makes your data models harder to work with.
   </Accordion>
   <Accordion title="Test with preview before syncing">
     Always check the Preview tab before running a full sync. This lets you catch mapping issues, unexpected nulls, or type mismatches before they reach your app data.

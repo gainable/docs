@@ -14,7 +14,7 @@
         "tab": "Documentation",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Get started",
             "pages": [
               "introduction",
               "quickstart"
@@ -29,7 +29,7 @@
             ]
           },
           {
-            "group": "Prompt Guide",
+            "group": "Prompt guide",
             "pages": [
               "prompting/overview",
               "prompting/best-practices",
@@ -38,7 +38,7 @@
             ]
           },
           {
-            "group": "Building Apps",
+            "group": "Building apps",
             "pages": [
               "building/data-models",
               "building/data-connectors",
@@ -48,7 +48,7 @@
             ]
           },
           {
-            "group": "AI Agents & Copilot",
+            "group": "AI agents & copilot",
             "pages": [
               "agents/overview",
               "agents/creating-agents",
@@ -58,7 +58,7 @@
             ]
           },
           {
-            "group": "Skills Reference",
+            "group": "Skills reference",
             "pages": [
               "skills/chartjs",
               "skills/kanban",
@@ -89,7 +89,7 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Get Started",
+          "anchor": "Get started",
           "href": "https://build.gainable.dev",
           "icon": "rocket"
         },
@@ -114,7 +114,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Start Building",
+      "label": "Start building",
       "href": "https://build.gainable.dev"
     }
   },

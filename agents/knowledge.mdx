@@ -1,14 +1,14 @@
 ---
-title: "Knowledge Bases"
+title: "Knowledge bases"
 description: "Upload documents your agent can reference when answering questions"
 ---
 
 ## What are knowledge bases?
 
-Knowledge bases let you upload documents that your AI agent can reference during conversations. This is powered by **RAG (Retrieval-Augmented Generation)** — when a user asks a question, the agent searches your uploaded documents for relevant information and uses it to generate accurate answers.
+Knowledge bases let you upload documents that your AI agent can reference during conversations. This is powered by **RAG (Retrieval-Augmented Generation)**. When a user asks a question, the agent searches your uploaded documents for relevant information and uses it to generate accurate answers.
 
 <Info>
-Think of a knowledge base as giving your agent a reference library. Instead of making up answers, the agent can look up the right information from your actual documents.
+Think of a knowledge base as giving your agent a reference library. Instead of making up answers, the agent can look up the right information from your documents.
 </Info>
 
 ## How it works
@@ -49,13 +49,13 @@ Think of a knowledge base as giving your agent a reference library. Instead of m
 
 <AccordionGroup>
   <Accordion title="Sales agent + product catalog">
-    Upload your product catalog and pricing sheet. The agent can answer questions like "What's the price for the Enterprise plan?" or "Compare the Pro and Business tiers" using actual product data.
+    Upload your product catalog and pricing sheet. The agent can answer questions like "What's the price for the Enterprise plan?" or "Compare the Pro and Business tiers" using your product data.
   </Accordion>
   <Accordion title="Support agent + troubleshooting guide">
     Upload troubleshooting documentation and FAQs. The agent can walk users through solutions: "My printer won't connect" triggers a lookup of your troubleshooting steps for printer connectivity.
   </Accordion>
   <Accordion title="HR assistant + company policies">
-    Upload the employee handbook, PTO policies, and benefits guide. Employees can ask "How many vacation days do I get?" and get accurate answers from your actual policy documents.
+    Upload the employee handbook, PTO policies, and benefits guide. Employees can ask "How many vacation days do I get?" and get accurate answers from your policy documents.
   </Accordion>
   <Accordion title="Onboarding agent + training materials">
     Upload onboarding guides and training docs. New hires can ask "What's the process for setting up my development environment?" and get step-by-step instructions from your materials.
@@ -65,7 +65,7 @@ Think of a knowledge base as giving your agent a reference library. Instead of m
 ## Managing knowledge bases
 
 <Note>
-Knowledge bases are managed through the UI using the folder icon on the agent detail panel — not through chat prompts. You can add, remove, and replace documents at any time through this interface.
+Knowledge bases are managed through the UI using the folder icon on the agent detail panel, not through chat prompts. You can add, remove, and replace documents at any time through this interface.
 </Note>
 
 To update a knowledge base:
@@ -82,7 +82,7 @@ Knowledge bases and [functions](/agents/functions) work together to give your ag
 |--------|----------|---------|
 | **Functions** | Live app data that changes frequently | "How many open deals do I have?" |
 | **Knowledge** | Static reference material and documentation | "What's our refund policy?" |
-| **Both** | Questions that need data context + reference material | "This customer wants a refund — what's the policy and what's their order history?" |
+| **Both** | Questions that need data context + reference material | "This customer wants a refund. What's the policy and what's their order history?" |
 
 ```text
 Create a support agent that can:
