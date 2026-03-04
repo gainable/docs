@@ -46,6 +46,38 @@ Features:
 
 This plan is then handed to the Build Agent.
 
+## DataAnalyzer Agent
+
+The DataAnalyzer is used when you [build from data](/build-from-data) instead of describing an app. It examines your synced data and designs an app spec through conversation.
+
+<Card title="What the DataAnalyzer does" icon="magnifying-glass-chart">
+- Analyzes schema, field types, and sample data from connected sources
+- Identifies the domain (CRM, project management, finance, etc.)
+- Detects patterns that map to features (pipeline enums → kanban, currency → dashboards)
+- Asks clarifying questions through interactive multiple-choice options
+- Produces a multi-stage build specification
+- Decides where to place collaboration features based on domain context
+</Card>
+
+### Example: DataAnalyzer in action
+
+When you connect a Google Sheet with deal data (name, amount, stage, close date), the DataAnalyzer:
+
+```
+Domain detected: CRM / Sales
+Key patterns:
+- "stage" enum with pipeline values → Kanban board
+- "amount" currency field → Dashboard KPIs + charts
+- "close_date" date field → Timeline filtering
+
+Recommended views:
+- Pipeline (kanban by stage)
+- Dashboard (revenue KPIs + charts)
+- Deals table (searchable, sortable)
+```
+
+It then asks 2-3 questions to refine the spec before handing off to the Build Agent.
+
 ## Build Agent
 
 The Build Agent is the workhorse that generates all your application code.
@@ -136,6 +168,10 @@ The agents work in sequence, each building on the previous work:
     Your working app appears in the preview
   </Step>
 </Steps>
+
+<Tip>
+When you use the [Build from data](/build-from-data) path, the DataAnalyzer Agent replaces the Planner Agent in this sequence. Instead of analyzing a text prompt, it analyzes your data schema and produces a build specification through interactive conversation. The Build Agent and Validation Agent work the same way in both paths.
+</Tip>
 
 ## Context preservation
 

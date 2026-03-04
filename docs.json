@@ -17,7 +17,8 @@
             "group": "Get started",
             "pages": [
               "introduction",
-              "quickstart"
+              "quickstart",
+              "build-from-data"
             ]
           },
           {

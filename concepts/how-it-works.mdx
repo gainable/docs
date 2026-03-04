@@ -3,9 +3,22 @@ title: "How it works"
 description: "Understand how Gainable turns your ideas into working apps"
 ---
 
-## From idea to app
+## Two paths to your app
 
-When you describe what you want to build, Gainable uses specialized AI agents that work together to create your application. Here's what happens behind the scenes:
+Gainable uses specialized AI agents that work together to create your application. The agents involved depend on how you start:
+
+<CardGroup cols={2}>
+  <Card title="Describe your app" icon="pen-line">
+    Write what you want in plain English. The Planner Agent creates a build plan, the Build Agent generates code, and the Validation Agent ensures quality.
+  </Card>
+  <Card title="Build from data" icon="database">
+    Connect external data sources. The DataAnalyzer Agent examines your schema, recommends features through interactive Q&A, and produces a build specification.
+  </Card>
+</CardGroup>
+
+Both paths converge at the Build Agent, which generates your complete application.
+
+### Path 1: Describe your app
 
 <Steps>
   <Step title="You describe your app">
@@ -22,6 +35,29 @@ When you describe what you want to build, Gainable uses specialized AI agents th
   </Step>
   <Step title="Your app is ready">
     A fully functional application is ready to use immediately.
+  </Step>
+</Steps>
+
+### Path 2: Build from data
+
+<Steps>
+  <Step title="Connect and sync your data">
+    Choose a data source (Google Sheets, HubSpot, Stripe, etc.), authenticate, and sync your data into Gainable.
+  </Step>
+  <Step title="DataAnalyzer Agent examines your schema">
+    The agent analyzes your field names, types, sample rows, and enum values. It identifies the domain (CRM, project management, finance, etc.) and detects patterns like pipeline stages, currency fields, or contact records.
+  </Step>
+  <Step title="Interactive refinement">
+    The agent asks 2-3 clarifying questions through multiple-choice options. You shape the app spec through conversation.
+  </Step>
+  <Step title="Build Agent generates code">
+    The same Build Agent used in the prompt path executes the spec, creating views, dashboards, and collaboration features matched to your data.
+  </Step>
+  <Step title="Validation ensures quality">
+    Validation checks run to catch common issues before delivery.
+  </Step>
+  <Step title="Your app is ready">
+    A fully functional application appears, pre-populated with your synced data.
   </Step>
 </Steps>
 
@@ -46,6 +82,9 @@ Gainable uses multiple AI agents, each specialized for a specific task:
   </Card>
   <Card title="Build Agent" icon="hammer">
     Generates the code for your application. Creates database models, routes, and user interfaces.
+  </Card>
+  <Card title="DataAnalyzer Agent" icon="magnifying-glass-chart">
+    Examines synced data schemas and sample data. Identifies the domain, recommends features, and produces a build specification through interactive conversation. Used in the "Build from data" path.
   </Card>
   <Card title="Validation Agent" icon="shield-check">
     Checks generated code for common issues and ensures it follows best practices.
@@ -113,6 +152,43 @@ Checks ensure:
 You now have a working task tracker you can use immediately.
 </Accordion>
 
+<Accordion title="Example: Building from a Google Sheet of sales deals">
+**1. You connect and sync your Google Sheet**
+
+The sheet has columns: Deal Name, Company, Amount, Stage (New, Qualified, Proposal, Won, Lost), Close Date, Owner.
+
+**2. DataAnalyzer Agent analyzes the schema**
+
+The agent identifies:
+- Domain: CRM / Sales (deal + amount + stage enum)
+- Pipeline enum: Stage with 5 values → kanban board
+- Currency field: Amount → KPI cards and charts
+- Date field: Close Date → timeline filtering
+
+**3. Agent asks clarifying questions**
+
+"I see a sales pipeline with 5 stages and deal values. What should be the primary view?"
+
+Options: Pipeline Board / Revenue Dashboard / Deal Table
+
+**4. You refine through Q&A**
+
+You pick "Pipeline Board" as the primary view. The agent asks one more question about how to handle the Owner field.
+
+**5. Build Agent generates the app**
+
+The Build Agent creates:
+- A kanban board with deals grouped by stage
+- A dashboard with pipeline value KPIs and charts by stage
+- A searchable deal table
+- Comments on individual deals
+- An AI copilot configured for sales questions
+
+**6. Your app is ready**
+
+Pre-populated with all your Google Sheet data, ready to use immediately.
+</Accordion>
+
 ## How iteration works
 
 Gainable remembers everything about your project. When you ask for changes:
@@ -147,6 +223,9 @@ You don't need to know any of these technologies to use Gainable. This is just w
 <CardGroup cols={2}>
   <Card title="Meet the agents" icon="users" href="/concepts/agents">
     Deep dive into each AI agent and what they do
+  </Card>
+  <Card title="Build from data" icon="database" href="/build-from-data">
+    Connect external data sources and let AI design your app
   </Card>
   <Card title="Explore skills" icon="wand-magic-sparkles" href="/concepts/skills">
     Discover built-in features you can request

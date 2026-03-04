@@ -13,16 +13,57 @@ The **Data Model agent** walks you through the process: discovering available co
   Data connectors are a build-time tool. You set them up while designing your app, and they sync external data into your data models. This is different from [copilot agents](/agents/copilot), which are runtime assistants that help your app's users.
 </Info>
 
+## Two ways to use connectors
+
+Data connectors serve two purposes in Gainable:
+
+<CardGroup cols={2}>
+  <Card title="Build a new app from data" icon="rocket" href="/build-from-data">
+    Connect your sources, sync data, and let the DataAnalyzer agent design an entire app around your schema. Best when starting a new project from existing data.
+  </Card>
+  <Card title="Add external data to an existing app" icon="plug">
+    Connect sources to bring data into an app you've already built. The Data Model agent helps you map columns to your existing data models.
+  </Card>
+</CardGroup>
+
+The rest of this page covers how to set up and manage connectors in both scenarios.
+
 ## Supported data sources
 
-| Source            | Category       | Auth               | Capabilities                            |
-| ----------------- | -------------- | ------------------ | --------------------------------------- |
-| **HubSpot**       | CRM            | OAuth              | Read & write contacts, companies, deals |
-| **Folk CRM**      | CRM            | API key            | Read & write CRM data                   |
-| **Google Sheets** | Spreadsheet    | OAuth              | Read & write rows                       |
-| **Stripe**        | Payments       | API key            | Read customers, invoices, subscriptions |
-| **Databricks**    | Data warehouse | Client ID & Secret | Read catalogs, schemas, tables, run SQL |
-| **Attio**         | CRM            | OAuth              | Read & write CRM data                   |
+### CRM
+
+| Source | Auth | Capabilities |
+|--------|------|-------------|
+| **HubSpot** | OAuth | Read & write contacts, companies, deals |
+| **Attio** | OAuth | Read & write CRM data |
+| **Folk CRM** | API key | Read & write CRM data |
+| **Salesforce** | OAuth | Read & write CRM data |
+
+### Databases and spreadsheets
+
+| Source | Auth | Capabilities |
+|--------|------|-------------|
+| **Google Sheets** | OAuth | Read & write rows |
+| **Airtable** | OAuth | Read & write bases |
+| **Supabase** | API key + URL | Read & write tables |
+
+### Analytics and product
+
+| Source | Auth | Capabilities |
+|--------|------|-------------|
+| **Google Analytics** | OAuth | Read analytics data |
+| **PostHog** | API key | Read event and user data |
+| **Mixpanel** | OAuth | Read analytics data |
+| **Typeform** | OAuth | Read form responses |
+| **Linear** | OAuth | Read & write issues |
+| **Jira** | OAuth | Read & write issues |
+
+### Payments and data warehouses
+
+| Source | Auth | Capabilities |
+|--------|------|-------------|
+| **Stripe** | API key | Read customers, invoices, subscriptions |
+| **Databricks** | Client credentials | Read catalogs, schemas, tables, run SQL |
 
 ## How it works
 
@@ -128,6 +169,9 @@ Use the **Sync** button in the **Preview tab **to pull the latest data from conn
 ## Learn more
 
 <CardGroup cols={2}>
+  <Card title="Build from data" icon="rocket" href="/build-from-data">
+    Let AI analyze your connected data and build an app around it
+  </Card>
   <Card title="Data models" icon="database" href="/building/data-models">
     How Gainable organizes and stores your app data
   </Card>
