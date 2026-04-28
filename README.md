@@ -11,7 +11,7 @@ docs/
 │
 ├── concepts/
 │   ├── how-it-works.mdx      # How Gainable builds apps
-│   ├── agents.mdx            # AI agent system
+│   ├── agents.mdx            # The build agent system
 │   └── skills.mdx            # Built-in capabilities
 │
 ├── prompting/
@@ -21,16 +21,39 @@ docs/
 │   └── common-patterns.mdx   # Templates for common apps
 │
 ├── building/
+│   ├── data-connectors.mdx   # Datasets and external sources
 │   ├── data-models.mdx       # Data and schemas
 │   ├── views.mdx             # UI and pages
 │   ├── real-time.mdx         # Live updates
 │   └── collaboration.mdx     # Chat, files, comments
+│
+├── copilots/                 # Gaia Copilot: conversational AI in apps
+│   ├── overview.mdx
+│   ├── configuring.mdx
+│   ├── data-access.mdx
+│   ├── knowledge.mdx
+│   └── embedding.mdx
+│
+├── autopilot/                # Gaia Autopilot: autonomous, draft-and-approve
+│   ├── overview.mdx
+│   ├── objectives.mdx
+│   ├── playbooks.mdx
+│   ├── triggers.mdx
+│   ├── tools.mdx
+│   ├── risk-tiers.mdx
+│   ├── inbox.mdx
+│   ├── scopes.mdx
+│   ├── agent-action-log.mdx
+│   ├── connect-outbound.mdx
+│   └── recipes.mdx
 │
 ├── skills/
 │   ├── chartjs.mdx           # Data visualization
 │   ├── kanban.mdx            # Drag-drop boards
 │   ├── weavy.mdx             # Collaboration features
 │   └── design.mdx            # Themes and styling
+│
+├── compare/                  # vs Retool, Appsmith, Lovable, Replit, Structify
 │
 └── reference/
     ├── api.mdx               # Generated app APIs

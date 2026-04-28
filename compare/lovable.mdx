@@ -25,7 +25,8 @@ If you're a developer who wants AI-assisted coding with full control over the ge
 | **Codebase size** | Up to 90% smaller via composable architecture | Large: every UI element is custom-generated code |
 | **Data connections** | Intelligent agent normalizes multi-source data automatically | Manual: you connect to data sources yourself |
 | **Collaboration** | Built-in chat, comments, file sharing, AI copilot | Not included: build or integrate it yourself |
-| **RAG agents** | Full RAG agents on live data with composable copilot UI | Not included: no agent or copilot capabilities |
+| **Conversational AI** | Gaia Copilot reads live data and references uploaded knowledge | None |
+| **Autonomous agents** | Gaia Autopilot watches data and drafts work for approval in the inbox | None |
 | **Pricing model** | Flat rate, unlimited builds | Token-based, with usage meters and limits |
 | **Target use case** | Internal business tools on unified data | Visual prototyping and front-end code generation |
 | **Iteration** | Describe changes in plain English | Re-prompt and debug new output |
@@ -67,13 +68,13 @@ Lovable generates code. Connecting that code to your business data (HubSpot, Str
 
 Gainable's [datasets](/building/data-connectors) let you connect your live business data — HubSpot, Stripe, Google Sheets, and more — into a single dataset and build your app on that unified data. This is the killer combination: unified data from multiple sources plus zero-debugging app generation.
 
-### RAG agents and composable copilot UI
+### Conversational AI plus autonomous agents
 
-Lovable focuses on front-end code generation. Adding AI agents, retrieval-augmented generation, or embedded copilots requires building the LLM integration, data retrieval, context management, and chat UI separately.
+Lovable focuses on front-end code generation. Adding conversational AI, retrieval-augmented generation, or autonomous agents requires building the LLM integration, data retrieval, context management, chat UI, scheduler, change-stream listener, and approval inbox separately.
 
-Gainable lets you create full [RAG agents](/agents/overview) connected to your live, unified business data in real time. Your copilot can answer questions like "which campaigns drove the most revenue last month?" by querying your connected data sources: HubSpot, Stripe, Sheets, and more. The [composable copilot UI](/agents/copilot) is powered by Weavy, so you get a production-tested chat interface embedded directly in your app, not hundreds of lines of generated chat code.
+Gainable ships both halves of intelligence inside every app. [Gaia Copilot](/copilots/overview) is the conversational side: it answers questions like "which campaigns drove the most revenue last month?" by querying your connected data sources (HubSpot, Stripe, Sheets, and more) through MCP. [Gaia Autopilot](/autopilot/overview) are the proactive side: they watch data, draft outbound work, and land it in [Autopilot](/autopilot/inbox) for approval. The chat UI is powered by Weavy, embedded directly, not hundreds of lines of generated code.
 
-This is the full picture: intelligent data unification + zero-debugging app generation + RAG agents on your live data with a composable copilot UI.
+The full picture: intelligent data unification + zero-debugging app generation + Gaia Copilot for conversation + Gaia Autopilot for autonomy.
 
 ### No token anxiety
 
@@ -119,7 +120,7 @@ Flat-rate pricing means your costs stay the same whether you build one app or tw
     Create your first app in minutes. No code required
   </Card>
   <Card title="See how it works" icon="gears" href="/concepts/how-it-works">
-    Learn how Gainable's AI agents build your apps
+    Learn how Gainable builds your apps
   </Card>
 </CardGroup>
 

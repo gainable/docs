@@ -25,7 +25,8 @@ If you have developers who want full control and prefer self-hosting, Appsmith g
 | **Component approach** | Production-tested composable components (Weavy, Kanban, Charts) | Pixel-by-pixel widget dragging |
 | **Codebase size** | Up to 90% smaller via composable architecture | Grows with every widget and query |
 | **Collaboration** | Built-in chat, comments, file sharing, AI copilot | No native collaboration in apps |
-| **RAG agents** | Full RAG agents connected to live data with composable copilot UI | No AI agent capabilities |
+| **Conversational AI** | Gaia Copilot reads live data and references uploaded knowledge | No native AI |
+| **Autonomous agents** | Gaia Autopilot watches data, drafts work, and lands it in your inbox for approval | None |
 | **Pricing model** | Per builder, unlimited end users | Free tier + Business plan charges per user |
 
 ## Where Appsmith shines
@@ -42,7 +43,7 @@ If you have developers who want full control and prefer self-hosting, Appsmith g
 
 Appsmith's getting-started guide begins with connecting a database, writing SQL queries, and configuring JavaScript bindings. Appsmith is low-code, so it still requires developer involvement.
 
-Gainable starts with "describe what you want." The [AI agent system](/concepts/how-it-works) handles data modeling, UI generation, query logic, and component wiring. Your operations lead can build the same tool that would take a developer days in Appsmith.
+Gainable starts with "describe what you want." The [build agent system](/concepts/how-it-works) handles data modeling, UI generation, query logic, and component wiring. Your operations lead can build the same tool that would take a developer days in Appsmith.
 
 <CardGroup cols={2}>
   <Card title="Gainable approach" icon="message">
@@ -65,11 +66,11 @@ Appsmith apps are assembled from individual widgets, each connected to queries a
 
 Gainable uses production-tested composable components. Ask for chat and you get a full [Weavy chat component](/building/collaboration). Ask for a kanban board and you get a complete [Kanban component](/skills/kanban). Ask for charts and you get [Chart.js visualizations](/skills/chartjs). Your codebase stays up to 90% smaller because you're composing proven components, not assembling widgets from scratch.
 
-### RAG agents with composable copilot UI
+### Conversational AI plus autonomous agents
 
-Appsmith doesn't include AI agent capabilities, so adding an intelligent assistant requires building the LLM integration, retrieval logic, and chat UI separately.
+Appsmith doesn't include native AI capabilities, so adding an intelligent assistant requires building the LLM integration, retrieval logic, and chat UI separately.
 
-Gainable lets you create full [RAG agents](/agents/overview) that connect directly to your live, unified business data in real time. Your team can ask the copilot natural-language questions like "show me overdue tasks assigned to the west region" and get answers drawn from your app data. The [composable copilot UI](/agents/copilot) is powered by Weavy, giving you a production-tested chat interface embedded right in your app.
+Gainable ships [Gaia Copilot](/copilots/overview) and [Gaia Autopilot](/autopilot/overview) inside every app. The Copilot is the conversational side: your team asks natural-language questions like "show me overdue tasks assigned to the west region" and the Copilot queries your live data through MCP. Agents are the proactive side: they watch data against inferred objectives, draft work, and land it in [Autopilot](/autopilot/inbox) for approval. The chat UI is powered by Weavy, embedded directly in your app.
 
 ### Same pricing advantage
 
@@ -115,7 +116,7 @@ With Gainable, you skip both the hosting costs and the per-user fees. One flat r
     Create your first app in minutes, no code required
   </Card>
   <Card title="See how it works" icon="gears" href="/concepts/how-it-works">
-    Learn how Gainable's AI agents build your apps
+    Learn how Gainable builds your apps
   </Card>
 </CardGroup>
 

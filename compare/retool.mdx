@@ -23,7 +23,8 @@ If your team has developers who enjoy wiring up components and writing SQL, Reto
 | **Data connections** | Intelligent agent normalizes multi-source data automatically | Manual query writing per data source |
 | **Database** | Flexible MongoDB (schema changes without migrations) | SQL-based (requires migrations for schema changes) |
 | **Collaboration** | Built-in chat, comments, file sharing, AI copilot | Limited: no native team collaboration in apps |
-| **RAG agents** | Full RAG agents connected to live data with composable copilot UI | Retool AI (separate add-on, no real-time data RAG) |
+| **Conversational AI** | Gaia Copilot reads live data and references uploaded knowledge | Retool AI as a separate add-on |
+| **Autonomous agents** | Gaia Autopilot watches data and drafts work for approval in the inbox | None |
 | **Pricing model** | Per builder: unlimited end users | Per end-user: costs scale with adoption |
 | **Hosting** | Fully managed, zero DevOps | Cloud or self-hosted (self-hosted requires maintenance) |
 | **Iteration speed** | Describe changes in plain English | Reconfigure components, rewrite queries |
@@ -42,7 +43,7 @@ If your team has developers who enjoy wiring up components and writing SQL, Reto
 
 Retool's canvas gives developers fine-grained control, but that control comes with complexity. You drag widgets, wire up event handlers, write SQL queries, and add JavaScript transformers. Every connection is manual.
 
-Gainable replaces the entire workflow with a single prompt. Describe your app, and the [AI agent system](/concepts/how-it-works) handles data modeling, UI generation, and component wiring automatically.
+Gainable replaces the entire workflow with a single prompt. Describe your app, and the [build agent system](/concepts/how-it-works) handles data modeling, UI generation, and component wiring automatically.
 
 <CardGroup cols={2}>
   <Card title="Gainable approach" icon="message">
@@ -69,15 +70,15 @@ Gainable charges per builder only. Deploy your app to 50 or 5,000 end users. The
 Gainable's flat-rate pricing means you never have to think twice about giving more people access to the tools they need.
 </Info>
 
-### RAG agents on your live data
+### Gaia Copilot and Gaia Autopilot on your live data
 
 Retool recently added AI features, but they're a separate add-on from the core data layer.
 
-Gainable lets you build full [RAG (Retrieval-Augmented Generation) agents](/agents/overview) that connect directly to your live, unified business data. Ask your copilot "which deals are at risk this quarter?" and it queries your pipeline data in real time. The [composable copilot UI](/agents/copilot), powered by Weavy, is a production-tested chat interface embedded directly in your app.
+Every Gainable app ships with two pieces of intelligence built in. [Gaia Copilot](/copilots/overview) is the conversational layer: ask "which deals are at risk this quarter?" and it queries your pipeline data in real time. [Gaia Autopilot](/autopilot/overview) are the autonomous layer: they watch data against inferred objectives and draft work into [Autopilot](/autopilot/inbox) for approval. Both share the same data through MCP and the [tool registry](/autopilot/tools).
 
 <CardGroup cols={2}>
-  <Card title="Gainable copilot" icon="robot">
-    Full RAG agents with real-time data access, embedded in a composable copilot UI alongside your app
+  <Card title="Gainable" icon="robot">
+    Gaia Copilot for "the user asks, the Copilot answers." Gaia Autopilot for "work shows up before anyone asks."
   </Card>
   <Card title="Retool AI" icon="puzzle-piece">
     AI add-on, separate from the core data layer
@@ -124,7 +125,7 @@ Build for your entire company without worrying about per-seat costs. Only the pe
     Create your first app in minutes. No code required
   </Card>
   <Card title="See how it works" icon="gears" href="/concepts/how-it-works">
-    Learn how Gainable's AI agents build your apps
+    Learn how Gainable builds your apps
   </Card>
 </CardGroup>
 

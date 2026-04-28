@@ -25,7 +25,8 @@ One is a coding platform with AI. The other is a business tool platform powered 
 | **Debugging required** | None. Validation Agent catches issues before delivery | Yes. You debug and maintain the generated code |
 | **Data unification** | Intelligent agent normalizes multi-source data automatically | No data platform. You code all integrations |
 | **Collaboration** | Built-in chat, comments, file sharing, AI copilot | Multiplayer coding (developer collaboration, not app-user collaboration) |
-| **RAG agents** | Full RAG agents on live data with composable copilot UI | Replit AI assists with coding (not embedded in your output apps) |
+| **Conversational AI** | Gaia Copilot reads live data and references uploaded knowledge | Replit AI assists with coding, not embedded in your output apps |
+| **Autonomous agents** | Gaia Autopilot watches data and drafts work for approval in the inbox | None |
 | **Pricing model** | Flat rate, unlimited builds | Token/cycle-based with usage limits |
 | **Deployment** | Automatic. Your app is live immediately | Manual. Configure hosting and deployment |
 | **Iteration** | Describe changes in plain English | Edit code, debug, redeploy |
@@ -44,7 +45,7 @@ One is a coding platform with AI. The other is a business tool platform powered 
 
 Replit can build anything, which means its AI is general-purpose. When building a CRM, it generates generic application code rather than business-specific patterns for deal pipelines, sales stages, or revenue visualizations.
 
-Gainable's [AI agents](/concepts/how-it-works) are trained specifically for business applications. Every decision, from data models to UI patterns to component selection, is optimized for the internal tools businesses need.
+Gainable's [build agents](/concepts/how-it-works) are trained specifically for business applications. Every decision, from data models to UI patterns to component selection, is optimized for the internal tools businesses need.
 
 <CardGroup cols={2}>
   <Card title="Gainable" icon="bullseye">
@@ -67,13 +68,13 @@ Replit is a code editor, not a data platform. Connecting to HubSpot, Stripe, Goo
 
 Gainable's [datasets](/building/data-connectors) let you connect your business data sources — HubSpot, Stripe, Google Sheets, and more — into a single dataset and build your app on that unified data. This is the combination that matters: unified data from multiple sources plus zero-debugging app generation.
 
-### RAG agents with composable copilot UI
+### Conversational AI plus autonomous agents
 
 Replit's AI assists during development but isn't embedded in the apps you ship. End users don't interact with it.
 
-Gainable lets you build full [RAG agents](/agents/overview) that connect to your live, unified business data and embed directly into your apps. Your users can ask questions like "what's our pipeline forecast for Q3?" and the copilot queries your data in real time. The [composable copilot UI](/agents/copilot), powered by Weavy, is a production-tested chat interface, not something you have to code and maintain.
+Every Gainable app ships with two pieces of intelligence built in. [Gaia Copilot](/copilots/overview) is the conversational layer: users ask questions like "what's our pipeline forecast for Q3?" and the Copilot queries your data in real time through MCP. [Gaia Autopilot](/autopilot/overview) are the autonomous layer: they watch data, draft work, and land it in [Autopilot](/autopilot/inbox) for approval. The chat UI is powered by Weavy, embedded directly, not something you code and maintain.
 
-The full stack: intelligent data unification + zero-debugging apps + RAG agents on live data with a composable copilot UI.
+The full stack: intelligent data unification + zero-debugging apps + Gaia Copilot + Gaia Autopilot.
 
 ### No token anxiety
 
@@ -119,7 +120,7 @@ One price covers unlimited app builds, unlimited iterations, and unlimited end u
     Create your first app in minutes. No code required
   </Card>
   <Card title="See how it works" icon="gears" href="/concepts/how-it-works">
-    Learn how Gainable's AI agents build your apps
+    Learn how Gainable builds your apps
   </Card>
 </CardGroup>
 

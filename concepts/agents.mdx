@@ -1,11 +1,15 @@
 ---
-title: "Agents"
-description: "Meet the AI agents that build your applications"
+title: "Build agents"
+description: "Meet the build agents that turn your prompt into a working application"
 ---
 
-## The agent system
+## The build agent system
 
-Gainable uses multiple specialized AI agents, each with a specific role in building your application. Think of them as a team of experts working together.
+Gainable uses multiple specialized build agents, each with a specific role in turning your prompt into a working app. Think of them as a team of experts working together.
+
+<Info>
+**Build agents vs Gaia.** This page is about the agents that *build* your app: Planner, DataAnalyzer, Build, Validation, Conversation. Once your app is live, two more pieces of Gaia run *inside* it: [Gaia Copilot](/copilots/overview) for conversation and [Gaia Autopilot](/autopilot/overview) for autonomous work.
+</Info>
 
 ## Planner Agent
 
@@ -196,15 +200,23 @@ To get the most from the agent system:
 3. **Use natural language** - Write like you're explaining to a colleague
 4. **Request by feature name** - "Add a pie chart" is clearer than "visualize this somehow"
 
-## Custom AI agents in your apps
+## Gaia inside your finished apps
 
-The agents described above (Planner, Build, Validation, Conversation) are **build agents** that work behind the scenes to create your app. Gainable also lets you create **custom AI agents** that live inside your finished app as interactive assistants for your users.
+The agents described above (Planner, Build, Validation, Conversation) are **build agents** that work behind the scenes to create your app. Once your app is live, two more pieces of Gaia run inside it:
 
-Custom agents can chat with users, query your app's data, reference uploaded documents, and provide guidance through an embedded copilot interface.
+- **Gaia Copilot.** The conversational assistant. The user asks; the Copilot answers. It reads your app's live data and references uploaded knowledge.
+- **Gaia Autopilot.** The autonomous side. They watch data, draft work, and land it in Autopilot for approval. They run on their own.
 
-<Card title="Learn about custom AI agents" icon="robot" href="/agents/overview" horizontal>
-  Create AI assistants with data access, knowledge bases, and an embedded chat interface
-</Card>
+The two are designed to work side by side. Copilot is reactive. Agents are proactive.
+
+<CardGroup cols={2}>
+  <Card title="Gaia Copilot" icon="comments" href="/copilots/overview">
+    Conversational assistant with data access, knowledge bases, and an embedded chat interface
+  </Card>
+  <Card title="Gaia Autopilot" icon="robot" href="/autopilot/overview">
+    Autonomous agents that watch data and draft work for approval in Autopilot
+  </Card>
+</CardGroup>
 
 ## Learn more
 
@@ -215,7 +227,10 @@ Custom agents can chat with users, query your app's data, reference uploaded doc
   <Card title="Prompting guide" icon="message" href="/prompting/overview">
     Write better prompts for better results
   </Card>
-  <Card title="AI agents & copilot" icon="robot" href="/agents/overview">
-    Add custom AI assistants to your apps
+  <Card title="Gaia Copilot" icon="comments" href="/copilots/overview">
+    The conversational layer of every app
+  </Card>
+  <Card title="Gaia Autopilot" icon="robot" href="/autopilot/overview">
+    The proactive, autonomous layer
   </Card>
 </CardGroup>

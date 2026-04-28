@@ -49,13 +49,29 @@
             ]
           },
           {
-            "group": "AI agents & copilot",
+            "group": "Gaia Copilot",
             "pages": [
-              "agents/overview",
-              "agents/creating-agents",
-              "agents/functions",
-              "agents/knowledge",
-              "agents/copilot"
+              "copilots/overview",
+              "copilots/configuring",
+              "copilots/data-access",
+              "copilots/knowledge",
+              "copilots/embedding"
+            ]
+          },
+          {
+            "group": "Gaia Autopilot",
+            "pages": [
+              "autopilot/overview",
+              "autopilot/objectives",
+              "autopilot/playbooks",
+              "autopilot/triggers",
+              "autopilot/tools",
+              "autopilot/risk-tiers",
+              "autopilot/inbox",
+              "autopilot/scopes",
+              "autopilot/agent-action-log",
+              "autopilot/connect-outbound",
+              "autopilot/recipes"
             ]
           },
           {
@@ -125,5 +141,22 @@
       "github": "https://github.com/gainable",
       "linkedin": "https://linkedin.com/company/gainable"
     }
-  }
+  },
+  "redirects": [
+    { "source": "/agents/creating-agents", "destination": "/copilots/configuring" },
+    { "source": "/agents/functions", "destination": "/copilots/data-access" },
+    { "source": "/agents/knowledge", "destination": "/copilots/knowledge" },
+    { "source": "/agents/copilot", "destination": "/copilots/embedding" },
+    { "source": "/agents/overview", "destination": "/autopilot/overview" },
+    { "source": "/agents/objectives", "destination": "/autopilot/objectives" },
+    { "source": "/agents/playbooks", "destination": "/autopilot/playbooks" },
+    { "source": "/agents/triggers", "destination": "/autopilot/triggers" },
+    { "source": "/agents/tools", "destination": "/autopilot/tools" },
+    { "source": "/agents/risk-tiers", "destination": "/autopilot/risk-tiers" },
+    { "source": "/agents/autopilot", "destination": "/autopilot/inbox" },
+    { "source": "/agents/scopes", "destination": "/autopilot/scopes" },
+    { "source": "/agents/agent-action-log", "destination": "/autopilot/agent-action-log" },
+    { "source": "/agents/connect-outbound", "destination": "/autopilot/connect-outbound" },
+    { "source": "/agents/recipes", "destination": "/autopilot/recipes" }
+  ]
 }

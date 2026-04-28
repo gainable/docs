@@ -5,7 +5,7 @@ description: "Understand how Gainable turns your ideas into working apps"
 
 ## Two paths to your app
 
-Gainable uses specialized AI agents that work together to create your application. The agents involved depend on how you start:
+Gainable uses specialized build agents that work together to create your application. The agents involved depend on how you start:
 
 <CardGroup cols={2}>
   <Card title="Describe your app" icon="pen-line">
@@ -74,7 +74,7 @@ Gainable creates **complete, production-ready applications**, not code snippets:
 
 ## The agent system
 
-Gainable uses multiple AI agents, each specialized for a specific task:
+Gainable uses multiple build agents, each specialized for a specific task:
 
 <CardGroup cols={2}>
   <Card title="Planner Agent" icon="clipboard-list">
@@ -94,15 +94,23 @@ Gainable uses multiple AI agents, each specialized for a specific task:
   </Card>
 </CardGroup>
 
-## Beyond building: AI agents in your apps
+## Beyond building: Gaia inside your apps
 
-The agents above (Planner, Build, Validation, Conversation) work behind the scenes to *build* your app. Gainable also lets you create **custom AI agents** that live *inside* your finished app and help your users directly.
+The agents above (Planner, Build, Validation, Conversation) work behind the scenes to *build* your app. Once it's live, two more pieces of Gaia run inside it:
 
-These custom agents can chat with users, look up app data, reference uploaded documents, and provide guidance, all through an embedded copilot interface.
+- **Gaia Copilot.** The conversational layer. The user asks; the Copilot answers. It reads live app data and references uploaded knowledge.
+- **Gaia Autopilot.** The autonomous layer. They watch data against inferred objectives, draft work, and land it in [Autopilot](/autopilot/inbox) for approval.
 
-<Card title="Learn about custom AI agents" icon="robot" href="/agents/overview" horizontal>
-  Create AI assistants that interact with your app data and help your users
-</Card>
+The two are designed to live side by side. Copilot is reactive. Agents are proactive.
+
+<CardGroup cols={2}>
+  <Card title="Gaia Copilot" icon="comments" href="/copilots/overview">
+    The conversational layer for "the user asks, the Copilot answers"
+  </Card>
+  <Card title="Gaia Autopilot" icon="robot" href="/autopilot/overview">
+    The proactive layer for "work shows up before anyone asks"
+  </Card>
+</CardGroup>
 
 ## What happens when you send a prompt
 
@@ -252,16 +260,19 @@ You don't need to know any of these technologies to use Gainable. This is just w
 ## Learn more
 
 <CardGroup cols={2}>
-  <Card title="Meet the agents" icon="users" href="/concepts/agents">
-    Deep dive into each AI agent and what they do
+  <Card title="Meet the build agents" icon="users" href="/concepts/agents">
+    Deep dive into the agents that build your app
   </Card>
   <Card title="Build from data" icon="database" href="/build-from-data">
-    Connect external data sources and let AI design your app
+    Connect external data sources and let Gainable design your app
   </Card>
   <Card title="Explore skills" icon="wand-magic-sparkles" href="/concepts/skills">
     Discover built-in features you can request
   </Card>
-  <Card title="AI agents & copilot" icon="robot" href="/agents/overview">
-    Add custom AI assistants to your apps
+  <Card title="Gaia Copilot" icon="comments" href="/copilots/overview">
+    Add a conversational assistant to your app
+  </Card>
+  <Card title="Gaia Autopilot" icon="robot" href="/autopilot/overview">
+    Add autonomous agents that draft work in the background
   </Card>
 </CardGroup>
